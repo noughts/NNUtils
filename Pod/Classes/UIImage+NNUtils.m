@@ -13,6 +13,8 @@
 #import "NSURL+NNUtils.h"
 @import MobileCoreServices;
 @import ImageIO;
+#import "NNCGUtils.h"
+#import <NBULog.h>
 
 @implementation UIImage (NNUtils)
 
@@ -58,6 +60,13 @@ static NSOperationQueue* _imageProcessing_queue;
 	CGRect fixedRect = rect;
 	if( self.imageOrientation == UIImageOrientationLeft || self.imageOrientation == UIImageOrientationRight ){
 		fixedRect = CGRectMake( rect.origin.y, rect.origin.x, rect.size.height, rect.size.width);
+	}
+	
+	/// 同じサイズだったらそのまま返す
+	CGRect selfRect = CGRectMake(0, 0, self.size.width, self.size.height);
+	if( [NNCGUtils checkRect:fixedRect isEqualToRect:selfRect] ){
+		NBULogVerbose(@"同じサイズなのでそのまま返します");
+		return self.copy;
 	}
 	
 	CGImageRef imageRef = CGImageCreateWithImageInRect( self.CGImage, fixedRect );

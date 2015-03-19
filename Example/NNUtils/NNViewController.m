@@ -16,7 +16,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
-	UIImage* img2 = [img cropToDeviceAspectRatio];
+	NSLog( @"isLandscape=%@", @([img isPortrait]) );
+//	UIImage* img2 = [img cropToDeviceAspectRatio];
 	
 }
 

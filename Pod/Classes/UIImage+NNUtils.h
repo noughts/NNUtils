@@ -10,6 +10,13 @@
 
 @interface UIImage (NNUtils)
 
+/// 横長画像？
+-(BOOL)isLandscape;
+/// 縦長画像？
+-(BOOL)isPortrait;
+/// 正方形？
+-(BOOL)isSquare;
+
 /// JpegにしてDocumentsディレクトリに保存
 -(NSURL*)saveJpegToDocumentDirectoryWithQuality:(CGFloat)quality error:(NSError**)error;
 

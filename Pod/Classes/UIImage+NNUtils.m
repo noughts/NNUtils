@@ -20,6 +20,20 @@
 
 static NSOperationQueue* _imageProcessing_queue;
 
+/// 横長画像？
+-(BOOL)isLandscape{
+	return self.size.width > self.size.height;
+}
+/// 縦長画像？
+-(BOOL)isPortrait{
+	return self.size.width < self.size.height;
+}
+/// 正方形？
+-(BOOL)isSquare{
+	return self.size.width == self.size.height;
+}
+
+
 
 /// JpegにしてDocumentsディレクトリに保存
 -(NSURL*)saveJpegToDocumentDirectoryWithQuality:(CGFloat)quality error:(NSError**)error{

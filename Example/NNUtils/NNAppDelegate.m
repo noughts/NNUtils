@@ -7,12 +7,25 @@
 //
 
 #import "NNAppDelegate.h"
+#import <UITableViewCell+AppearanceProxy.h>
+
 
 @implementation NNAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+//	[[UIView appearance] setBackgroundColor:[UIColor grayColor]];
+	[UITableViewCell appearance].backgroundColor = [UIColor blackColor];
+	[[UITableViewCell appearance] setTextLabelColor:[UIColor yellowColor]];
+	[[UITableViewCell appearance] setDetailTextLabelColor:[UIColor colorWithWhite:1 alpha:0.5]];
+	[UITableView appearance].separatorColor = [UIColor colorWithWhite:1 alpha:0.2];
+	[UITableView appearance].backgroundColor = [UIColor blackColor];
+	[UINavigationBar appearance].barStyle = UIBarStyleBlackTranslucent;
+	
+	UIView* view = [[UIView alloc] init];
+	view.backgroundColor = [UIColor darkGrayColor];
+	[[UITableViewCell appearance] setSelectedBackgroundView:view];
+	
     return YES;
 }
 							

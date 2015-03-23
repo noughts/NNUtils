@@ -38,6 +38,34 @@ UIViewAnimationOptions curveOptionsFromCurve(UIViewAnimationCurve curve){
 
 
 
+-(UILabel*)labelWithTag:(NSInteger)tag{
+	UIView* view = [self viewWithTag:tag];
+	if( [view isKindOfClass:[UILabel class]] == NO ){
+		return nil;
+	}
+	return (UILabel*)view;
+}
+
+
+-(UIImageView*)imageViewWithTag:(NSInteger)tag{
+	UIView* view = [self viewWithTag:tag];
+	if( [view isKindOfClass:[UIImageView class]] == NO ){
+		return nil;
+	}
+	return (UIImageView*)view;
+}
+
+-(UIButton*)buttonWithTag:(NSInteger)tag{
+	UIView* view = [self viewWithTag:tag];
+	if( [view isKindOfClass:[UIButton class]] == NO ){
+		return nil;
+	}
+	return (UIButton*)view;
+}
+
+
+
+
 
 /// 現在の状態をキャプチャしたUIImageを返す
 -(UIImage *)screenCaptureAfterScreenUpdates:(BOOL)afterUpdates{

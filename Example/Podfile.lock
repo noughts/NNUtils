@@ -14,7 +14,7 @@ PODS:
   - FBSnapshotTestCase (1.5)
   - NBULog (1.2.4):
     - CocoaLumberjack (>= 2.0.0)
-  - NNUtils (1.3.0):
+  - NNUtils (1.5.0):
     - NBULog
   - Specta (0.4.0)
 
@@ -35,7 +35,7 @@ SPEC CHECKSUMS:
   Expecta+Snapshots: 4a56b9411c6ed156987072e52c39de67d864015a
   FBSnapshotTestCase: e2914fbaabccea1dcc773d6a16b1c24540642488
   NBULog: 1b0d63d3f9e614796c62dc04b1850adfbbbe117e
-  NNUtils: c94489ac6ba3b047073277add3d09a5c7c11a260
+  NNUtils: 7702abfd1f402cdde17939b59191f0a465360c1a
   Specta: 1df326d6ec48603c77f507a0ab1f89ad2df1c582
 
 COCOAPODS: 0.35.0

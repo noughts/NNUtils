@@ -16,6 +16,10 @@
 
 
 
+-(UILabel*)labelWithTag:(NSInteger)tag;
+-(UIImageView*)imageViewWithTag:(NSInteger)tag;
+-(UIButton*)buttonWithTag:(NSInteger)tag;
+
 /// 現在の状態をキャプチャしたUIImageを返す
 -(UIImage *)screenCaptureAfterScreenUpdates:(BOOL)afterUpdates;
 

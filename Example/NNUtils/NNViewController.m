@@ -8,17 +8,19 @@
 
 #import "NNViewController.h"
 #import <UIImage+NNUtils.h>
+#import <UIDevice+NNUtils.h>
 
 @implementation NNViewController
 
 - (void)viewDidLoad{
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
-	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
-	NSLog( @"isLandscape=%@", @([img isPortrait]) );
-//	UIImage* img2 = [img cropToDeviceAspectRatio];
-	
+
+
+//	NSLog( @">>>%@<<<", [UIDevice currentDevice].ownerName );
+	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"ky の iPhone"] );
+	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"Koichi Yamamoto の iPhone"] );
+	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"たかの の iPhone"] );
 }
 
 @end

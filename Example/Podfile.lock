@@ -8,13 +8,13 @@ PODS:
   - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
   - Expecta (0.3.2)
-  - Expecta+Snapshots (1.3.1):
-    - Expecta
-    - FBSnapshotTestCase
-  - FBSnapshotTestCase (1.5)
+  - Expecta+Snapshots (1.3.2):
+    - Expecta (~> 0.3)
+    - FBSnapshotTestCase (= 1.6)
+  - FBSnapshotTestCase (1.6)
   - NBULog (1.2.4):
     - CocoaLumberjack (>= 2.0.0)
-  - NNUtils (1.5.0):
+  - NNUtils (1.5.1):
     - NBULog
   - Specta (0.4.0)
 
@@ -32,10 +32,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   CocoaLumberjack: fd2b1031c6c4e0f08b5ea928ef677fa0a5de517d
   Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
-  Expecta+Snapshots: 4a56b9411c6ed156987072e52c39de67d864015a
-  FBSnapshotTestCase: e2914fbaabccea1dcc773d6a16b1c24540642488
+  Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
+  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   NBULog: 1b0d63d3f9e614796c62dc04b1850adfbbbe117e
-  NNUtils: 7702abfd1f402cdde17939b59191f0a465360c1a
+  NNUtils: d293c086f7f495c182e065ead5f610005ca66ca4
   Specta: 1df326d6ec48603c77f507a0ab1f89ad2df1c582
 
 COCOAPODS: 0.35.0

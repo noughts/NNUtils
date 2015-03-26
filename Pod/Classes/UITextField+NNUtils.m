@@ -17,7 +17,7 @@
 		NBULogWarn(@"placeholderを指定した後に呼んでください");
 		return;
 	}
-	self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{ NSForegroundColorAttributeName:[UIColor grayColor] }];
+	self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName:color}];
 }
 
 

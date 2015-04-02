@@ -1,20 +1,13 @@
-//
-//  UIImage+Utils.m
-//  UIImage+UtilsDemo
-//
-//  Created by noughts on 2014/09/08.
-//  Copyright (c) 2014年 noughts. All rights reserved.
-//
-
-#import "UIImage+NNUtils.h"
-#import "UIImageEffects.h"
+@import MobileCoreServices;
+@import ImageIO;
+// :: Other ::
+#import "NNCGUtils.h"
 #import "NNUtils.h"
 #import "NSData+NNUtils.h"
 #import "NSURL+NNUtils.h"
-@import MobileCoreServices;
-@import ImageIO;
-#import "NNCGUtils.h"
-#import <NBULog.h>
+#import "UIImage+NNUtils.h"
+#import "UIImageEffects.h"
+
 
 @implementation UIImage (NNUtils)
 
@@ -79,7 +72,7 @@ static NSOperationQueue* _imageProcessing_queue;
 	/// 同じサイズだったらそのまま返す
 	CGRect selfRect = CGRectMake(0, 0, self.size.width, self.size.height);
 	if( [NNCGUtils checkRect:fixedRect isEqualToRect:selfRect] ){
-		NBULogVerbose(@"同じサイズなのでそのまま返します");
+//		NBULogVerbose(@"同じサイズなのでそのまま返します");
 		return self.copy;
 	}
 	

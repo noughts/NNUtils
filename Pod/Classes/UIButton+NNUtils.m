@@ -7,7 +7,6 @@
 //
 
 #import "UIButton+NNUtils.h"
-#import <NBULog.h>
 
 @implementation UIButton (NNUtils)
 
@@ -17,7 +16,7 @@
 		[self setTitle:title forState:UIControlStateNormal];
 	} else {
 		if( self.buttonType != UIButtonTypeCustom ){
-			NBULogWarn(@"ボタンタイトルのアニメーションなし変更は、buttonType == UIButtonTypeCustom のみ動作する仕様のようです");
+//			NBULogWarn(@"ボタンタイトルのアニメーションなし変更は、buttonType == UIButtonTypeCustom のみ動作する仕様のようです");
 		}
 		[UIView setAnimationsEnabled:NO];
 		[self setTitle:title forState:UIControlStateNormal];/// UIButtonTypeCustom であることに注意

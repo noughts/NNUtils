@@ -7,14 +7,13 @@
 //
 
 #import "UITextField+NNUtils.h"
-#import <NBULog.h>
 
 @implementation UITextField (NNUtils)
 
 /// placeholderの色を変更。※placeholderをセットした後に呼んでください
 -(void)setPlaceholderColor:(UIColor*)color{
 	if( !self.placeholder || self.placeholder.length == 0 ){
-		NBULogWarn(@"placeholderを指定した後に呼んでください");
+//		NBULogWarn(@"placeholderを指定した後に呼んでください");
 		return;
 	}
 	self.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName:color}];

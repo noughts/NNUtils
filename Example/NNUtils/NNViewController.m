@@ -17,10 +17,6 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-
-
-	NSLog( @"%@", NSStringFromCGRect(_btn.frame) );
-	NSLog( @"%@", NSStringFromCGRect([_btn rectInView:self.view]) );
 }
 
 @end

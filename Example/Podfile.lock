@@ -1,20 +1,20 @@
 PODS:
-  - CocoaLumberjack (1.9.2):
-    - CocoaLumberjack/Extensions (= 1.9.2)
-  - CocoaLumberjack/Core (1.9.2)
-  - CocoaLumberjack/Extensions (1.9.2):
+  - CocoaLumberjack (2.0.0):
+    - CocoaLumberjack/Default (= 2.0.0)
+    - CocoaLumberjack/Extensions (= 2.0.0)
+  - CocoaLumberjack/Core (2.0.0)
+  - CocoaLumberjack/Default (2.0.0):
     - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.0):
+    - CocoaLumberjack/Default
   - Expecta (0.3.2)
   - Expecta+Snapshots (1.3.2):
     - Expecta (~> 0.3)
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
-  - NBUCore (2.0.4)
-  - NBULog (1.0.9):
-    - CocoaLumberjack (< 2.0.0)
-    - NBUCore (>= 2.0.2)
+  - NBULog (1.2.4):
+    - CocoaLumberjack (>= 2.0.0)
   - NNUtils (1.7.1):
-    - CocoaLumberjack (~> 1.9)
     - NBULog
   - Specta (0.4.0)
 
@@ -30,13 +30,12 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
+  CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  NBUCore: 89cbf3976cae47c358fd0ed8562ef66d79a8904a
-  NBULog: 29ca577bc3d5089978b7ae8125c40abd80aab5da
-  NNUtils: 1de2bfd1d422d8c1ff64a85d05494b078548e815
+  NBULog: 4003be6706b97a7e376ab4171c666ac7c2fbc2b2
+  NNUtils: deb8d7733d4cbe67fc2271648709331b388c338b
   Specta: a353759f073ffcc0a365b782fe4aaeac064c03c6
 
 COCOAPODS: 0.36.3

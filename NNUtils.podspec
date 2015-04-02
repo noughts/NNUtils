@@ -31,5 +31,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'NBULog', '1.2.0' # NBULog が依存している CocoaLumberjackが2.0 からswift対応しiOS7用にpod repo pushできなくなったので、少し古いもの使うように指定
+  s.dependency 'NBULog'
+  s.dependency 'CocoaLumberjack', '~> 1.9' # NBULog が依存している CocoaLumberjackが2.0 からswift対応しiOS7用にpod repo pushできなくなったので、少し古いもの使うように指定
 end

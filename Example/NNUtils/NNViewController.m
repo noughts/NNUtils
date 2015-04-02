@@ -9,18 +9,18 @@
 #import "NNViewController.h"
 #import <UIImage+NNUtils.h>
 #import <UIDevice+NNUtils.h>
+#import <UIView+NNUtils.h>
 
-@implementation NNViewController
+@implementation NNViewController{
+	__weak IBOutlet UIButton* _btn;
+}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 
 
-//	NSLog( @">>>%@<<<", [UIDevice currentDevice].ownerName );
-	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"ky の iPhone"] );
-	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"Koichi Yamamoto の iPhone"] );
-	NSLog(@">>>%@<<<", [UIDevice stripProductNameFromString:@"たかの の iPhone"] );
+	NSLog( @"%@", NSStringFromCGRect(_btn.frame) );
+	NSLog( @"%@", NSStringFromCGRect([_btn rectInView:self.view]) );
 }
 
 @end

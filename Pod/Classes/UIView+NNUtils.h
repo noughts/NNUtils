@@ -15,6 +15,8 @@
 + (void)animateWithKeyboardNotification:(NSNotification *)note animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 
 
+/// 指定したview内でのrectを返す
+-(CGRect)rectInView:(UIView*)view;
 
 -(UILabel*)labelWithTag:(NSInteger)tag;
 -(UIImageView*)imageViewWithTag:(NSInteger)tag;

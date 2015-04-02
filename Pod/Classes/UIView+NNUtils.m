@@ -36,6 +36,10 @@ UIViewAnimationOptions curveOptionsFromCurve(UIViewAnimationCurve curve){
 
 
 
+/// 指定したview内でのrectを返す
+-(CGRect)rectInView:(UIView*)view{
+	return [self convertRect:self.bounds toView:view];
+}
 
 
 -(UILabel*)labelWithTag:(NSInteger)tag{

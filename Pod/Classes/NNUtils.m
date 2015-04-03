@@ -15,6 +15,7 @@
 	UIAlertView* alert = [UIAlertView new];
 	alert.title = @"";
 	alert.message = message;
+	[alert addButtonWithTitle:@"OK"];
 	[alert show];
 }
 

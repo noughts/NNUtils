@@ -10,6 +10,14 @@
 
 @implementation NNUtils
 
+/// アラート表示
++(void)alert:(NSString*)message{
+	UIAlertView* alert = [UIAlertView new];
+	alert.title = @"";
+	alert.message = message;
+	[alert show];
+}
+
 /// JavaScript の setTimetout
 +(void)setTimeout:(void(^)(void))block delay:(float)delay{
 	[NSTimer scheduledTimerWithTimeInterval:delay target:[NSBlockOperation blockOperationWithBlock:block] selector:@selector(main) userInfo:nil repeats:NO];

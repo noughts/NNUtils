@@ -10,6 +10,9 @@
 
 @interface NNUtils : NSObject
 
+/// アラート表示
++(void)alert:(NSString*)message;
+
 /// 画面の縦横比
 +(CGFloat)screenAspectRatio;
 

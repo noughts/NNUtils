@@ -23,9 +23,9 @@
 - (void)showAttributedText:(NSAttributedString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView;
 
 /// 指定したViewからPopTipを表示
-- (void)showText:(NSString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval;
+//- (void)showText:(NSString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval;
 
 /// 指定したViewからPopTipを表示
-- (void)showAttributedText:(NSAttributedString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval;
+//- (void)showAttributedText:(NSAttributedString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval;
 
 @end

@@ -5,7 +5,7 @@ PODS:
     - Expecta (~> 0.3)
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
-  - NNUtils (1.8.0):
+  - NNUtils (1.9.0):
     - AMPopTip
   - Specta (0.5.0)
 
@@ -25,7 +25,7 @@ SPEC CHECKSUMS:
   Expecta: 8c507baf13211207b1e9d0a741480600e6b4ed15
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  NNUtils: 307ba0b6121eef3e7956daf20242eeaa117afde5
+  NNUtils: 614bc2d2cd24286dd48f04f791d3b282cbf96ebe
   Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
 
 COCOAPODS: 0.35.0

@@ -14,6 +14,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+	/*
 	[UITableViewCell appearance].backgroundColor = [UIColor blackColor];
 	[[UITableViewCell appearance] setTextLabelColor:[UIColor yellowColor]];
 	[[UITableViewCell appearance] setDetailTextLabelColor:[UIColor colorWithWhite:1 alpha:0.5]];
@@ -24,6 +25,7 @@
 	UIView* view = [[UIView alloc] init];
 	view.backgroundColor = [UIColor darkGrayColor];
 	[[UITableViewCell appearance] setSelectedBackgroundView:view];
+	 */
 	
     return YES;
 }

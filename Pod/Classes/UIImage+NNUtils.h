@@ -10,6 +10,10 @@
 
 @interface UIImage (NNUtils)
 
+/// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"
+-(NSData*)dataWithMimetype:(NSString *)mimetype;
+
+
 /// 横長画像？
 -(BOOL)isLandscape;
 /// 縦長画像？

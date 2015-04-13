@@ -13,6 +13,32 @@
 
 static NSOperationQueue* _imageProcessing_queue;
 
+/// 画像をエンコードなしでNSDataに変換
+/// mimetype => "image/jpg" | "image/png"
+-(NSData*)dataWithMimetype:(NSString *)mimetype{
+	NSMutableData *imageData = [NSMutableData data];
+	CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)mimetype, NULL);
+	CGImageDestinationRef imageDestination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)imageData, uti, 1, NULL);
+	
+	if (imageDestination == NULL){
+		NSLog(@"Failed to create image destination");
+		imageData = nil;
+	} else {
+		CGImageDestinationAddImage(imageDestination, self.CGImage, nil);
+		if (CGImageDestinationFinalize(imageDestination) == NO){
+			NSLog(@"Failed to finalise");
+			imageData = nil;
+		}
+		CFRelease(imageDestination);
+	}
+	CFRelease(uti);
+	return imageData;
+}
+
+
+
+
+
 /// 横長画像？
 -(BOOL)isLandscape{
 	return self.size.width > self.size.height;
@@ -25,7 +51,6 @@ static NSOperationQueue* _imageProcessing_queue;
 -(BOOL)isSquare{
 	return self.size.width == self.size.height;
 }
-
 
 
 /// JpegにしてDocumentsディレクトリに保存

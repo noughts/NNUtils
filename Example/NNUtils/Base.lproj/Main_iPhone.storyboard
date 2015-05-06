@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iwp-ki-kPc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="iwp-ki-kPc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXt-Kr-6dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="1032"/>
+            <point key="canvasLocation" x="290" y="386"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="dN3-C4-hi1">
@@ -234,6 +234,23 @@
                                             <segue destination="fMk-eK-LeF" kind="push" id="X7S-mB-9E2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="a2e-Hn-Sy5" style="IBUITableViewCellStyleDefault" id="1pt-8H-24g">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1pt-8H-24g" id="0YY-Be-sLp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="UINavigationController" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a2e-Hn-Sy5">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Gg9-Sq-yvW" kind="push" id="Z3K-zZ-FZd"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -273,10 +290,92 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="so2-8U-YQb"/>
+                    <connections>
+                        <outlet property="_iv" destination="oKt-vF-XKn" id="428-6L-NoW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqK-CD-I1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="1675"/>
+            <point key="canvasLocation" x="287" y="1029"/>
+        </scene>
+        <!--Navigation Controller DemoVC-->
+        <scene sceneID="l4l-h1-mZt">
+            <objects>
+                <viewController id="Gg9-Sq-yvW" customClass="NavigationControllerDemoVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Py7-Ic-ISV"/>
+                        <viewControllerLayoutGuide type="bottom" id="McE-vd-EpR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mlj-oV-Kqd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mY-T2-urq">
+                                <rect key="frame" x="106" y="269" width="109" height="30"/>
+                                <state key="normal" title="Push With Fade">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPushButtonTap:" destination="Gg9-Sq-yvW" eventType="touchUpInside" id="bRM-fo-tV6"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="clw-qa-gVz">
+                                <rect key="frame" x="142" y="224" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2mY-T2-urq" firstAttribute="top" secondItem="clw-qa-gVz" secondAttribute="bottom" constant="8" symbolic="YES" id="hC3-IN-M9O"/>
+                            <constraint firstAttribute="centerX" secondItem="clw-qa-gVz" secondAttribute="centerX" id="jfH-2c-dHb"/>
+                            <constraint firstAttribute="centerY" secondItem="2mY-T2-urq" secondAttribute="centerY" id="lVU-8S-Aby"/>
+                            <constraint firstAttribute="centerX" secondItem="2mY-T2-urq" secondAttribute="centerX" id="uso-zC-Uq2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l3N-ww-N5C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tye-R0-wjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="274" y="1688"/>
+        </scene>
+        <!--Navigation Controller Demo2VC-->
+        <scene sceneID="A5X-61-boS">
+            <objects>
+                <viewController storyboardIdentifier="NavigationControllerDemo2VC" id="ZRL-Un-uE5" customClass="NavigationControllerDemo2VC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s7i-h6-sMP"/>
+                        <viewControllerLayoutGuide type="bottom" id="CNW-iV-9lV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ji5-yN-hQA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kc7-NK-R0N">
+                                <rect key="frame" x="109" y="269" width="102" height="30"/>
+                                <state key="normal" title="Pop With Fade">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPopButtonTap:" destination="ZRL-Un-uE5" eventType="touchUpInside" id="wbS-lv-COd"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5fI-Jm-kVr">
+                                <rect key="frame" x="142" y="307" width="37" height="37"/>
+                                <color key="color" red="0.98634642360000002" green="0.084784664209999999" blue="0.26611191029999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="kc7-NK-R0N" secondAttribute="centerX" id="7z5-BC-c6a"/>
+                            <constraint firstAttribute="centerX" secondItem="5fI-Jm-kVr" secondAttribute="centerX" id="JF5-Rv-Fz3"/>
+                            <constraint firstAttribute="centerY" secondItem="kc7-NK-R0N" secondAttribute="centerY" id="Kwl-Sy-RW8"/>
+                            <constraint firstItem="5fI-Jm-kVr" firstAttribute="top" secondItem="kc7-NK-R0N" secondAttribute="bottom" constant="8" symbolic="YES" id="ffP-hb-S8g"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCm-3k-2Ke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="1688"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rdG-xE-QlK">

@@ -9,8 +9,11 @@
 #import "UIImageDemoVC.h"
 #import <UIImage+NNUtils.h>
 
+#import <NNProfiler.h>
 
-@implementation UIImageDemoVC
+@implementation UIImageDemoVC{
+	__weak IBOutlet UIImageView* _iv;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -18,8 +21,18 @@
 	
 	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
 	
-	NSData* data = [img dataWithMimetype:@"image/png"];
+	[NNProfiler start:@"method1"];
+	NSData* data = [img dataWithMimetype:@"image/jpeg"];
+	[NNProfiler end:@"method1"];
+	
+	[NNProfiler start:@"method2"];
+	NSData* data2 = UIImageJPEGRepresentation(img, 1);
+	[NNProfiler end:@"method2"];
+	
+	UIImage* img2 = [UIImage imageWithData:data];
+	_iv.image = img2;
 	NSLog( @"%@", @(data.length) );
+	NSLog( @"%@", @(data2.length) );
 }
 
 @end

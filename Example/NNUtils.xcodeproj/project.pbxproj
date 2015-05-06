@@ -11,6 +11,8 @@
 		4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */; };
 		4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */; };
 		4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */; };
+		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
+		4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */; };
 		572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0498160B9F88FC0047719BDF /* libPods-NNUtils.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -49,6 +51,10 @@
 		4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTipVC.m; sourceTree = "<group>"; };
 		4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageDemoVC.h; sourceTree = "<group>"; };
 		4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageDemoVC.m; sourceTree = "<group>"; };
+		4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemoVC.h; sourceTree = "<group>"; };
+		4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemoVC.m; sourceTree = "<group>"; };
+		4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemo2VC.h; sourceTree = "<group>"; };
+		4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemo2VC.m; sourceTree = "<group>"; };
 		568B1D6B5F724EEA72AA4BB5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* NNUtils.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNUtils.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -148,6 +154,10 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */,
 				4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */,
+				4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */,
+				4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */,
+				4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */,
+				4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */,
 			);
 			path = NNUtils;
 			sourceTree = "<group>";
@@ -251,7 +261,7 @@
 		6003F582195388D10070C39A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = NN;
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "koichi yamamoto";
 				TargetAttributes = {
@@ -370,10 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */,
 				6003F59E195388D20070C39A /* NNAppDelegate.m in Sources */,
 				4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */,
 				4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,13 @@
 
 @interface NSString (NNUtils)
 
+/// 自身がアルファベットと数字のみで構成されているかチェック
+-(BOOL)isAlphaNumeric;
+
+/// 自身がアルファベットのみで構成されているかチェック
+-(BOOL)isAlphabetic;
+
+
 /// はじめの文字を大文字にした文字列を返す。Cocoa標準のcapitalizedStringだと、"addMember" -> "Addmember" になるが、これは "AddMember"になります。
 - (NSString*)capitalizedFirstLetterString;
 

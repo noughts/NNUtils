@@ -1,14 +1,14 @@
 PODS:
-  - AMPopTip (0.7.2)
-  - Expecta (0.4.0)
+  - AMPopTip (1.7.2)
+  - Expecta (0.4.2)
   - Expecta+Snapshots (1.3.2):
     - Expecta (~> 0.3)
     - FBSnapshotTestCase (= 1.6)
   - FBSnapshotTestCase (1.6)
   - NNProfiler (1.0.0)
-  - NNUtils (1.10.0):
+  - NNUtils (1.11.0):
     - AMPopTip
-  - Specta (0.5.0)
+  - Specta (1.0.0)
 
 DEPENDENCIES:
   - Expecta
@@ -23,12 +23,12 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  AMPopTip: 3823ef023ce8c92e1cf9cae111fae3665b18ae3c
-  Expecta: 392a6b5bfb9f4097e47dd8064d9b732079490332
+  AMPopTip: c59bb65d9fd230f0dceb5fbb5c92560b649f0195
+  Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
   NNProfiler: 3ef3ca7dece0a3bfd84f76b8fcac2f298e49e9c3
-  NNUtils: d4c076c69c6f63976eff1c51c973f32dfcd238a4
-  Specta: eb90708ed77569bbda089f8ead10bb99b8e9489e
+  NNUtils: bc51e18c257adb9131a1253590f4fee64733154c
+  Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
 
 COCOAPODS: 0.35.0

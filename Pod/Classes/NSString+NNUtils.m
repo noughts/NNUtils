@@ -10,7 +10,38 @@
 
 @implementation NSString (NNUtils)
 
-/// はじめの文字を大文字にした文字列を返す。Cocoa標準のcapitalizedStringだと、"memberList" -> "Memberlist" になるが、これは "MemberList"になります。 
+/// 自身がアルファベットと数字のみで構成されているかチェック
+-(BOOL)isAlphaNumeric{
+	return [self checkCompareStringWithCharSet:[NSCharacterSet alphanumericCharacterSet]];
+}
+
+/// 自身がアルファベットのみで構成されているかチェック
+-(BOOL)isAlphabetic{
+	// アルファベットのみで構成されるキャラクタセット
+	// 範囲を指定する方法でキャラクタセットに文字を追加している
+	NSMutableCharacterSet *alCharSet;
+	alCharSet = [[NSMutableCharacterSet alloc] init];
+	// 'a'から'z'を追加する
+	[alCharSet addCharactersInRange:NSMakeRange('a', 26)];
+	// 'A'から'Z'を追加する
+	[alCharSet addCharactersInRange:NSMakeRange('A', 26)];
+	return [self checkCompareStringWithCharSet:alCharSet];
+}
+
+
+-(BOOL)checkCompareStringWithCharSet:(NSCharacterSet *)baseString{
+	NSScanner *aScanner = [NSScanner localizedScannerWithString:self];
+	/// NSScannerはデフォルトで前後のスペースなどを読み飛ばすので、-setCharactersToBeSkipped:でnilを渡して抑制している｡
+	[aScanner setCharactersToBeSkipped:nil];
+	[aScanner scanCharactersFromSet:baseString intoString:NULL];
+	return [aScanner isAtEnd];
+}
+
+
+
+
+
+/// はじめの文字を大文字にした文字列を返す。Cocoa標準のcapitalizedStringだと、"memberList" -> "Memberlist" になるが、これは "MemberList"になります。
 -(NSString*)capitalizedFirstLetterString{
 	if (self.length <= 1) {
 		return self.capitalizedString;

@@ -10,6 +10,14 @@
 
 @implementation NNUtils
 
+/// 指定したレンジ内のランダム数を返す
++(CGFloat)randWithMin:(CGFloat)min max:(CGFloat)max{
+	NSInteger precise = 10000;
+	NSInteger gap = max - min;
+	NSInteger a = arc4random() % (gap * precise);
+	return a/(float)precise + min;
+}
+
 /// アラート表示
 +(void)alert:(NSString*)message{
 	UIAlertView* alert = [UIAlertView new];

@@ -10,6 +10,9 @@
 
 @interface NNUtils : NSObject
 
+/// 指定したレンジ内のランダム数を返す
++(CGFloat)randWithMin:(CGFloat)min max:(CGFloat)max;
+
 /// アラート表示
 +(void)alert:(NSString*)message;
 

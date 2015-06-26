@@ -256,7 +256,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pip-GK-mYz" id="3nw-uj-I7D">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="UIView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="51e-Na-KpY">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="NNSprite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="51e-Na-KpY">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -282,10 +282,10 @@
             </objects>
             <point key="canvasLocation" x="-262" y="1454"/>
         </scene>
-        <!--View DemoVC-->
+        <!--Sprite DemoVC-->
         <scene sceneID="x8L-uH-0pD">
             <objects>
-                <viewController id="hcL-Zp-Nsr" customClass="UIViewDemoVC" sceneMemberID="viewController">
+                <viewController id="hcL-Zp-Nsr" customClass="NNSpriteDemoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Veq-fG-X3x"/>
                         <viewControllerLayoutGuide type="bottom" id="3fE-fQ-xDV"/>
@@ -294,13 +294,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="yp0-24-wAN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiF-mo-jhC" customClass="NNSprite">
                                 <rect key="frame" x="138" y="262" width="44" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheetah1136.png" translatesAutoresizingMaskIntoConstraints="NO" id="yp0-24-wAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="Bg7-kM-Hby"/>
-                                    <constraint firstAttribute="width" constant="44" id="sVU-Ws-JpB"/>
+                                    <constraint firstAttribute="bottom" secondItem="yp0-24-wAN" secondAttribute="bottom" id="04n-5w-cPW"/>
+                                    <constraint firstItem="yp0-24-wAN" firstAttribute="top" secondItem="jiF-mo-jhC" secondAttribute="top" id="2D1-QI-vxE"/>
+                                    <constraint firstAttribute="width" constant="44" id="FhS-AL-82Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="yp0-24-wAN" secondAttribute="trailing" id="bX3-6k-XOX"/>
+                                    <constraint firstItem="yp0-24-wAN" firstAttribute="leading" secondItem="jiF-mo-jhC" secondAttribute="leading" id="hJt-cb-z6C"/>
+                                    <constraint firstAttribute="height" constant="44" id="ni9-s6-u4X"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11O-kM-abD">
                                 <rect key="frame" x="20" y="530" width="33" height="30"/>
                                 <state key="normal" title="Start">
@@ -322,17 +332,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="yp0-24-wAN" secondAttribute="centerX" id="Ai5-AY-Qjg"/>
+                            <constraint firstAttribute="centerY" secondItem="jiF-mo-jhC" secondAttribute="centerY" id="5KP-ho-cOB"/>
                             <constraint firstAttribute="trailing" secondItem="Vzq-TX-b6f" secondAttribute="trailing" constant="20" symbolic="YES" id="XOb-K5-qwC"/>
                             <constraint firstItem="11O-kM-abD" firstAttribute="leading" secondItem="BuT-t9-eoM" secondAttribute="leading" constant="20" symbolic="YES" id="Yck-KY-cm9"/>
                             <constraint firstItem="3fE-fQ-xDV" firstAttribute="top" secondItem="11O-kM-abD" secondAttribute="bottom" constant="8" symbolic="YES" id="bcY-xq-DVj"/>
+                            <constraint firstAttribute="centerX" secondItem="jiF-mo-jhC" secondAttribute="centerX" id="hL1-Jg-7G4"/>
                             <constraint firstItem="3fE-fQ-xDV" firstAttribute="top" secondItem="Vzq-TX-b6f" secondAttribute="bottom" constant="8" symbolic="YES" id="s9U-6F-yVX"/>
-                            <constraint firstAttribute="centerY" secondItem="yp0-24-wAN" secondAttribute="centerY" id="sqy-PE-DXc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n1i-z4-NGD"/>
                     <connections>
-                        <outlet property="_iv" destination="yp0-24-wAN" id="FWw-IJ-3jI"/>
+                        <outlet property="_sprite" destination="jiF-mo-jhC" id="CTw-yL-Ste"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxh-k7-fKT" userLabel="First Responder" sceneMemberID="firstResponder"/>

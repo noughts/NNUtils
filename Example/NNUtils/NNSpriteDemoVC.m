@@ -6,11 +6,12 @@
 //  Copyright (c) 2015年 koichi yamamoto. All rights reserved.
 //
 
-#import "UIViewDemoVC.h"
+#import "NNSpriteDemoVC.h"
 #import <NNUtils/UIView+NNUtils.h>
+#import <NNSprite/NNSprite.h>
 
-@implementation UIViewDemoVC{
-	__weak IBOutlet UIImageView* _iv;
+@implementation NNSpriteDemoVC{
+	__weak IBOutlet NNSprite* _sprite;
 }
 
 - (void)viewDidLoad {
@@ -20,11 +21,11 @@
 
 
 -(IBAction)onStartButtonTap:(id)sender{
-	[_iv startTalkAnimation];
+	[_sprite startTalkAnimation];
 }
 
 -(IBAction)onStopButtonTap:(id)sender{
-	[_iv stopTalkAnimation];
+	[_sprite stopTalkAnimation];
 }
 
 

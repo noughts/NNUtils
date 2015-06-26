@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewDemoVC : UIViewController
+@interface NNSpriteDemoVC : UIViewController
 
 @end

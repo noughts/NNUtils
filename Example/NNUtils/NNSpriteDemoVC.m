@@ -21,7 +21,7 @@
 
 
 -(IBAction)onStartButtonTap:(id)sender{
-	[_sprite startBeatAnimation];
+	[_sprite startBeatAnimationWithInterval:60];
 }
 
 -(IBAction)onStopButtonTap:(id)sender{

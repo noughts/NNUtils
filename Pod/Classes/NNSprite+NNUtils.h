@@ -2,7 +2,7 @@
 
 @interface NNSprite (NNUtils)
 
--(void)startBeatAnimation;
+-(void)startBeatAnimationWithInterval:(NSUInteger)interval;
 -(void)stopBeatAnimation;
 
 @end

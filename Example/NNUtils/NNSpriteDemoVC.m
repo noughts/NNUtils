@@ -21,11 +21,11 @@
 
 
 -(IBAction)onStartButtonTap:(id)sender{
-	[_sprite startTalkAnimation];
+	[_sprite startBeatAnimation];
 }
 
 -(IBAction)onStopButtonTap:(id)sender{
-	[_sprite stopTalkAnimation];
+	[_sprite stopBeatAnimation];
 }
 
 

@@ -2,7 +2,7 @@
 
 @interface NNSprite (NNUtils)
 
--(void)startTalkAnimation;
--(void)stopTalkAnimation;
+-(void)startBeatAnimation;
+-(void)stopBeatAnimation;
 
 @end

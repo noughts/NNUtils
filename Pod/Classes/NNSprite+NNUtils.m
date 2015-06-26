@@ -11,7 +11,8 @@
 
 @implementation NNSprite (NNUtils)
 
--(void)startTalkAnimation{
+-(void)startBeatAnimation{
+	__block NSUInteger i = 0;
 	[self setOnEnterFrameHandler:^(NNSprite *sprite, NSUInteger counter) {
 		CGFloat scaleDistance = sprite.scaleX - 1;
 		sprite.scaleX -= scaleDistance / 6;
@@ -19,14 +20,18 @@
 		
 		CGFloat rotationDistance = sprite.rotation;
 		sprite.rotation -= rotationDistance / 6;
-		if( counter % 60 == 0 ){
+		if( i % 60 == 0 ){
 			sprite.scaleX = sprite.scaleY = 1.2;
 			sprite.rotation = [NNUtils randWithMin:-10 max:10];
 		}
+		i++;
 	}];
 }
--(void)stopTalkAnimation{
+-(void)stopBeatAnimation{
 	[self setOnEnterFrameHandler:nil];
+	self.scaleX = 1;
+	self.scaleY = 1;
+	self.rotation = 0;
 }
 
 @end

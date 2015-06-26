@@ -11,11 +11,6 @@
 @interface UIView (NNUtils)
 
 
-/// 話すアニメ開始
--(void)startTalkAnimation;
-/// 話すアニメ停止
--(void)stopTalkAnimation;
-
 /// キーボード上下のNotificationに合わせてアニメーション
 + (void)animateWithKeyboardNotification:(NSNotification *)note animations:(void (^)(void))animations completion:(void (^)(BOOL finished))completion;
 

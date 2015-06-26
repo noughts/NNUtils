@@ -17,7 +17,7 @@ PODS:
     - CocoaLumberjack (>= 2.0.0)
   - NNProfiler (1.0.3):
     - NBULog
-  - NNSprite (0.1.0)
+  - NNSprite (0.2.0)
   - NNUtils (1.12.0):
     - AMPopTip
     - NNSprite
@@ -43,7 +43,7 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
   NBULog: 4003be6706b97a7e376ab4171c666ac7c2fbc2b2
   NNProfiler: dd3a8f85a4902ef5ef7f2bbbed01335be63a16b8
-  NNSprite: 12fb68457c47149bf5552d8be4a1740197f23ad4
+  NNSprite: 133c51c7f4f7b19e89c7d2bfdf7a296e519d585c
   NNUtils: 07430dd8673275c669fea06802471ea380c44276
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
 

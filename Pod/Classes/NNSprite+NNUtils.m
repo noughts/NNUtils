@@ -11,10 +11,11 @@
 @implementation NNSprite (NNUtils)
 
 -(void)startTalkAnimation{
-	[self setOnEnterFrameHandler:^{
-		CGFloat distance = self.scaleX - 1;
-		self.scaleX -= distance / 2;
-		self.scaleY -= distance / 2;
+	[self setOnEnterFrameHandler:^(NNSprite *sprite) {
+		NSLog( @"1" );
+		CGFloat distance = sprite.scaleX - 1;
+		sprite.scaleX -= distance / 2;
+		sprite.scaleY -= distance / 2;
 	}];
 }
 -(void)stopTalkAnimation{

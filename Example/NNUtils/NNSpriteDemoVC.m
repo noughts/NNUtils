@@ -7,8 +7,8 @@
 //
 
 #import "NNSpriteDemoVC.h"
-#import <NNUtils/UIView+NNUtils.h>
 #import <NNSprite/NNSprite.h>
+#import <NNSprite+NNUtils.h>
 
 @implementation NNSpriteDemoVC{
 	__weak IBOutlet NNSprite* _sprite;

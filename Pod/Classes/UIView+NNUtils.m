@@ -7,22 +7,9 @@
 //
 
 #import "UIView+NNUtils.h"
-#import "CADisplayLink+NNUtils.h"
 
 @implementation UIView (NNUtils)
 
-
-/// 話すアニメ開始
--(void)startTalkAnimation{
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(talkAnimation:) name:@"onEnterFrame" object:[CADisplayLink sharedLink]];
-}
--(void)talkAnimation:(NSNotification*)note{
-	NSLog( @"hoge" );
-}
-/// 話すアニメ停止
--(void)stopTalkAnimation{
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"onEnterFrame" object:[CADisplayLink sharedLink]];
-}
 
 
 

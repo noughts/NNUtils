@@ -17,11 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	_sprite.layer.cornerRadius = _sprite.frame.size.height/2;
 }
 
 
 -(IBAction)onStartButtonTap:(id)sender{
-	[_sprite startBeatAnimationWithInterval:60];
+	[_sprite startBeatAnimationWithInterval:30];
 }
 
 -(IBAction)onStopButtonTap:(id)sender{

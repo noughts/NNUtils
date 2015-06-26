@@ -13,7 +13,7 @@
 
 -(void)startBeatAnimationWithInterval:(NSUInteger)interval{
 	__block NSUInteger i = 0;
-	[self setOnEnterFrameHandler:^(NNSprite *sprite, NSUInteger counter) {
+	[self setOnEnterFrameHandler:^(NNSprite *sprite) {
 		CGFloat scaleDistance = sprite.scaleX - 1;
 		sprite.scaleX -= scaleDistance / 6;
 		sprite.scaleY -= scaleDistance / 6;

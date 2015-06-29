@@ -11,7 +11,7 @@
 
 @implementation NNSprite (NNUtils)
 
--(void)startBeatAnimationWithInterval:(NSUInteger)interval{
+-(void)startBeatAnimationWithInterval:(NSUInteger)interval scaleRatio:(CGFloat)scaleRatio{
 	__block NSUInteger i = 0;
 	[self setOnEnterFrameHandler:^(NNSprite *sprite) {
 		CGFloat scaleDistance = sprite.scaleX - 1;
@@ -21,11 +21,15 @@
 		CGFloat rotationDistance = sprite.rotation;
 		sprite.rotation -= rotationDistance / 6;
 		if( i % interval == 0 ){
-			sprite.scaleX = sprite.scaleY = 1.2;
+			sprite.scaleX = sprite.scaleY = scaleRatio;
 			sprite.rotation = [NNUtils randWithMin:-10 max:10];
 		}
 		i++;
 	}];
+}
+
+-(void)startBeatAnimationWithInterval:(NSUInteger)interval{
+	[self startBeatAnimationWithInterval:interval scaleRatio:1.5];
 }
 -(void)stopBeatAnimation{
 	[self setOnEnterFrameHandler:nil];

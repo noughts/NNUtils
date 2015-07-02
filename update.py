@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+"""
+pod を更新してpushするスクリプトです。
+1. コードを変更
+2. podspecのバージョン番号を更新
+3. commit
+4. python update.py
+"""
+
 import commands;
 import os;
 

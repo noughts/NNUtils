@@ -21,24 +21,28 @@
 /// 指定したViewからPopTipを表示
 - (void)showText:(NSString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView{
 	CGRect rect = [fromView rectInView:view];
+	self.hidden = NO;
 	[self showText:text direction:direction maxWidth:maxWidth inView:view fromFrame:rect];
 }
 
 /// 指定したViewからPopTipを表示
 - (void)showAttributedText:(NSAttributedString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView{
 	CGRect rect = [fromView rectInView:view];
+	self.hidden = NO;
 	[self showAttributedText:text direction:direction maxWidth:maxWidth inView:view fromFrame:rect];
 }
 
 /// 指定したViewからPopTipを表示
 - (void)showText:(NSString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval{
 	CGRect rect = [fromView rectInView:view];
+	self.hidden = NO;
 	[self showText:text direction:direction maxWidth:maxWidth inView:view fromFrame:rect duration:interval];
 }
 
 /// 指定したViewからPopTipを表示
 - (void)showAttributedText:(NSAttributedString *)text direction:(AMPopTipDirection)direction maxWidth:(CGFloat)maxWidth inView:(UIView *)view fromView:(UIView*)fromView duration:(NSTimeInterval)interval{
 	CGRect rect = [fromView rectInView:view];
+	self.hidden = NO;
 	[self showAttributedText:text direction:direction maxWidth:maxWidth inView:view fromFrame:rect duration:interval];
 }
 

@@ -8,7 +8,6 @@
 
 #import "UIImageDemoVC.h"
 #import <UIImage+NNUtils.h>
-
 #import <NNProfiler.h>
 
 @implementation UIImageDemoVC{
@@ -19,6 +18,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
+	
+	
+	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
+	
+	[NNProfiler start:@"warm up"];
+	_iv.image = [img imageByApplyingBlurWithRadius:1 tintColor:nil saturationDeltaFactor:1];
+	[NNProfiler end];
+
+	
+	[NNProfiler start:@"method1"];
+	_iv.image = [img imageByApplyingBlurWithRadius:1 tintColor:nil saturationDeltaFactor:1];
+	[NNProfiler end];
+	
+
+//	[NNProfiler start:@"method2"];
+//	_iv.image = [img imageByApplyingBlurWithRadius:10 optimized:NO tintColor:nil saturationDeltaFactor:1];
+//	[NNProfiler end];
+}
+
+
+-(void)resizeBenchmark{
+	
+}
+
+
+
+-(void)testEncode{
 	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
 	
 	[NNProfiler start:@"method1"];
@@ -34,5 +60,7 @@
 	NSLog( @"%@", @(data.length) );
 	NSLog( @"%@", @(data2.length) );
 }
+
+
 
 @end

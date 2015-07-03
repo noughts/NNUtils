@@ -7,6 +7,7 @@
 #import "NSURL+NNUtils.h"
 #import "UIImage+NNUtils.h"
 #import "UIImageEffects.h"
+#import <NNProfiler.h>
 
 
 @implementation UIImage (NNUtils)
@@ -85,49 +86,6 @@ static NSOperationQueue* _imageProcessing_queue;
 
 
 
-/// 指定したサイズにクロップ(リサイズなしでわりと高速)
-// 320*240サイズを 240*240にクロップして iPod touch で 4msくらい
--(UIImage*)cropToRect:(CGRect)rect{
-	// 画像が回転していた場合、CGImageCreateWithImageInRect に渡すrectを反転させる
-	CGRect fixedRect = rect;
-	if( self.imageOrientation == UIImageOrientationLeft || self.imageOrientation == UIImageOrientationRight ){
-		fixedRect = CGRectMake( rect.origin.y, rect.origin.x, rect.size.height, rect.size.width);
-	}
-	
-	/// 同じサイズだったらそのまま返す
-	CGRect selfRect = CGRectMake(0, 0, self.size.width, self.size.height);
-	if( [NNCGUtils checkRect:fixedRect isEqualToRect:selfRect] ){
-//		NBULogVerbose(@"同じサイズなのでそのまま返します");
-		return self.copy;
-	}
-	
-	CGImageRef imageRef = CGImageCreateWithImageInRect( self.CGImage, fixedRect );
-	UIImage *finalImage = [UIImage imageWithCGImage:imageRef scale:1 orientation:self.imageOrientation];
-	CGImageRelease(imageRef);
-	return finalImage;
-}
-
-
-/// デバイスの画面比率に合わせてクロップ
--(UIImage*)cropToDeviceAspectRatio{
-	NSInteger width = self.size.width;
-	NSInteger height = self.size.height;
-	CGRect rect = CGRectMake( 0, 0, width, height);
-	CGFloat screenAspectRatio = [NNUtils screenAspectRatio];
-	if( width < height ){
-		// この画像は縦長
-		rect.size.width = height * screenAspectRatio;
-		rect.origin.x = (width/2 - rect.size.width/2);
-	} else {
-		// この画像は横長
-		rect.size.height = width * screenAspectRatio;
-		rect.origin.y = (height/2 - rect.size.height/2);
-	}
-	return [self cropToRect:rect];
-}
-
-
-
 
 
 +(NSOperationQueue*)imageProcessingQueue{
@@ -137,6 +95,58 @@ static NSOperationQueue* _imageProcessing_queue;
 	}
 	return _imageProcessing_queue;
 }
+
+
+
+
+/// imageOrientationに合わせてレンダリングしたUIImageを返す
+// imageOrientationは時に厄介なので、これでノーマライズするのも有りです
+- (UIImage*)imageByNormalizingOrientation {
+	if (self.imageOrientation == UIImageOrientationUp)
+		return self;
+	
+	CGSize size = self.size;
+	UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+	[self drawInRect:(CGRect){{0, 0}, size}];
+	UIImage* normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	
+	return normalizedImage;
+}
+
+
+
+/// imageOrientationを変更
+// カメラから来た画像はもともと正しく表示されるように設定されているが、picasaインフラにアップロードされると見た目に合わせてレンダリングされimageOrientationが0になるので、
+// それを考慮して、どちらの画像でも正しくセットされるようにしてあります
+-(UIImage*)imageByApplyingNormalizedOrientation:(UIImageOrientation)orientation{
+	NSArray* fixedOrientations;
+	switch (self.imageOrientation) {
+		case UIImageOrientationUp:
+			fixedOrientations = @[@(UIImageOrientationUp), @(UIImageOrientationDown), @(UIImageOrientationRight), @(UIImageOrientationLeft)];
+			break;
+		case UIImageOrientationDown:
+			fixedOrientations = @[@(UIImageOrientationDown), @(UIImageOrientationUp), @(UIImageOrientationLeft), @(UIImageOrientationRight)];
+			break;
+		case UIImageOrientationLeft:
+			fixedOrientations = @[@(UIImageOrientationLeft), @(UIImageOrientationRight), @(UIImageOrientationUp), @(UIImageOrientationDown)];
+			break;
+		case UIImageOrientationRight:
+			fixedOrientations = @[@(UIImageOrientationRight), @(UIImageOrientationLeft), @(UIImageOrientationDown), @(UIImageOrientationUp)];
+			break;
+		default:
+			break;
+	}
+	NSNumber* fixedOrientation_num = fixedOrientations[orientation];
+	return [UIImage imageWithCGImage:self.CGImage scale:self.scale orientation:fixedOrientation_num.integerValue];
+}
+
+
+
+
+
+
+#pragma mark - ブラー系
 
 /// ブラー処理の最適化が必要？寸法が大きいと必要です。
 -(BOOL)needsBlurOptimized{
@@ -191,47 +201,44 @@ static NSOperationQueue* _imageProcessing_queue;
 
 
 
-/// imageOrientationに合わせてレンダリングしたUIImageを返す
-// imageOrientationは時に厄介なので、これでノーマライズするのも有りです
-- (UIImage*)imageByNormalizingOrientation {
-	if (self.imageOrientation == UIImageOrientationUp)
-		return self;
+
+
+
+
+
+
+
+
+#pragma mark - リサイズ系
+
+
+
+/// ImageIOを使ったリサイズ。アウトプットが小さいほど早い。アウトプットがでかいと、時間もかかりメモリ使用量も大きい
+/// フルサイズ -> 2000px	866ms	on iPhone5
+/// フルサイズ -> 200px		80ms	on iPhone5
++(UIImage*)resizeUsingImageIO:(NSData*)data maxPixelSize:(NSUInteger)maxPixelSize{
+	NSAssert( data, @"" );
+	UIImage* source_img = [UIImage imageWithData:data];
+	UIImageOrientation source_orientation = source_img.imageOrientation;
 	
-	CGSize size = self.size;
-	UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
-	[self drawInRect:(CGRect){{0, 0}, size}];
-	UIImage* normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
+	NSDictionary* options = @{
+							  (NSString*)kCGImageSourceCreateThumbnailFromImageAlways: @YES,
+							  (NSString*)kCGImageSourceThumbnailMaxPixelSize: @(maxPixelSize),
+							  (NSString*)kCGImageSourceCreateThumbnailFromImageIfAbsent: @YES,/// カメラから取得したデータをサムネイル化するには、これをYESにする必要あり
+							  (NSString*)kCGImageSourceCreateThumbnailWithTransform: @NO, /// これを YES にするとソースの回転情報を反映してくれるが、1.5倍くらい遅くなるので、最後にUIImageにするときにorientationを渡したほうが効率的
+							  };
+	CFDictionaryRef options_ref = (__bridge CFDictionaryRef)(options);
+	CFDataRef dataRef = (__bridge CFDataRef)(data);
+	CGImageSourceRef imageSource = CGImageSourceCreateWithData( dataRef, 0 );
+	CGImageRef image_ref = CGImageSourceCreateThumbnailAtIndex(imageSource, 0, options_ref);
+	UIImage* resized_img = [UIImage imageWithCGImage:image_ref scale:1 orientation:source_orientation];
 	
-	return normalizedImage;
+	CGImageRelease(image_ref);
+	CFRelease(imageSource);
+	
+	return resized_img;
 }
 
-
-
-/// imageOrientationを変更
-// カメラから来た画像はもともと正しく表示されるように設定されているが、picasaインフラにアップロードされると見た目に合わせてレンダリングされimageOrientationが0になるので、
-// それを考慮して、どちらの画像でも正しくセットされるようにしてあります
--(UIImage*)imageByApplyingNormalizedOrientation:(UIImageOrientation)orientation{
-	NSArray* fixedOrientations;
-	switch (self.imageOrientation) {
-		case UIImageOrientationUp:
-			fixedOrientations = @[@(UIImageOrientationUp), @(UIImageOrientationDown), @(UIImageOrientationRight), @(UIImageOrientationLeft)];
-			break;
-		case UIImageOrientationDown:
-			fixedOrientations = @[@(UIImageOrientationDown), @(UIImageOrientationUp), @(UIImageOrientationLeft), @(UIImageOrientationRight)];
-			break;
-		case UIImageOrientationLeft:
-			fixedOrientations = @[@(UIImageOrientationLeft), @(UIImageOrientationRight), @(UIImageOrientationUp), @(UIImageOrientationDown)];
-			break;
-		case UIImageOrientationRight:
-			fixedOrientations = @[@(UIImageOrientationRight), @(UIImageOrientationLeft), @(UIImageOrientationDown), @(UIImageOrientationUp)];
-			break;
-		default:
-			break;
-	}
-	NSNumber* fixedOrientation_num = fixedOrientations[orientation];
-	return [UIImage imageWithCGImage:self.CGImage scale:self.scale orientation:fixedOrientation_num.integerValue];
-}
 
 
 /// リサイズ
@@ -301,7 +308,46 @@ static NSOperationQueue* _imageProcessing_queue;
 
 
 
+/// 指定したサイズにクロップ(リサイズなしでわりと高速)
+// 320*240サイズを 240*240にクロップして iPod touch で 4msくらい
+-(UIImage*)cropToRect:(CGRect)rect{
+	// 画像が回転していた場合、CGImageCreateWithImageInRect に渡すrectを反転させる
+	CGRect fixedRect = rect;
+	if( self.imageOrientation == UIImageOrientationLeft || self.imageOrientation == UIImageOrientationRight ){
+		fixedRect = CGRectMake( rect.origin.y, rect.origin.x, rect.size.height, rect.size.width);
+	}
+	
+	/// 同じサイズだったらそのまま返す
+	CGRect selfRect = CGRectMake(0, 0, self.size.width, self.size.height);
+	if( [NNCGUtils checkRect:fixedRect isEqualToRect:selfRect] ){
+		//		NBULogVerbose(@"同じサイズなのでそのまま返します");
+		return self.copy;
+	}
+	
+	CGImageRef imageRef = CGImageCreateWithImageInRect( self.CGImage, fixedRect );
+	UIImage *finalImage = [UIImage imageWithCGImage:imageRef scale:1 orientation:self.imageOrientation];
+	CGImageRelease(imageRef);
+	return finalImage;
+}
 
+
+/// デバイスの画面比率に合わせてクロップ
+-(UIImage*)cropToDeviceAspectRatio{
+	NSInteger width = self.size.width;
+	NSInteger height = self.size.height;
+	CGRect rect = CGRectMake( 0, 0, width, height);
+	CGFloat screenAspectRatio = [NNUtils screenAspectRatio];
+	if( width < height ){
+		// この画像は縦長
+		rect.size.width = height * screenAspectRatio;
+		rect.origin.x = (width/2 - rect.size.width/2);
+	} else {
+		// この画像は横長
+		rect.size.height = width * screenAspectRatio;
+		rect.origin.y = (height/2 - rect.size.height/2);
+	}
+	return [self cropToRect:rect];
+}
 
 
 

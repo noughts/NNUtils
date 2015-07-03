@@ -10,6 +10,7 @@
 		4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D40DDD11AB17172006C07D3 /* cheetah1136.png */; };
 		4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */; };
 		4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */; };
+		4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */; };
 		4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */; };
 		4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */; };
 		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
@@ -50,6 +51,8 @@
 		4D54F4A21B3D257F006ABA9C /* NNSpriteDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSpriteDemoVC.h; sourceTree = "<group>"; };
 		4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSpriteDemoVC.m; sourceTree = "<group>"; };
 		4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		4D8A7BE01B4640F80050AFFC /* UIViewBlurDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewBlurDemoVC.h; sourceTree = "<group>"; };
+		4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewBlurDemoVC.m; sourceTree = "<group>"; };
 		4DA7AFD51ADBB54700AC0E63 /* PopTipVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopTipVC.h; sourceTree = "<group>"; };
 		4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTipVC.m; sourceTree = "<group>"; };
 		4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageDemoVC.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */,
 				4D54F4A21B3D257F006ABA9C /* NNSpriteDemoVC.h */,
 				4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */,
+				4D8A7BE01B4640F80050AFFC /* UIViewBlurDemoVC.h */,
+				4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */,
 			);
 			name = .demoVC;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */,
+				4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */,
 				4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */,
 				6003F59E195388D20070C39A /* NNAppDelegate.m in Sources */,
 				4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */,

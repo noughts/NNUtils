@@ -62,4 +62,28 @@
 
 
 
+
+
+
+
+
+
+
+#pragma mark - リサイズ系
+
+
+/// ImageIOを使ったリサイズ。アウトプットが小さいほど早い。アウトプットがでかいと、時間もかかりメモリ使用量も大きい
++(UIImage*)resizeUsingImageIO:(NSData*)data maxPixelSize:(NSUInteger)maxPixelSize;
+
+
+
+
+
+
+
+
+
+
+
+
 @end

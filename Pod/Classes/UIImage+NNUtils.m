@@ -83,6 +83,18 @@ static NSOperationQueue* _imageProcessing_queue;
 }
 
 
+/// UIImageJPEGRepresentation を使わずに UIImage を NSData にする。
+/// TODO: 未テスト
+-(NSData*)convertToData{
+	NSMutableData* data = [[NSMutableData alloc] init];
+	CGImageDestinationRef destination = CGImageDestinationCreateWithData((CFMutableDataRef)data, kUTTypeJPEG, 1, NULL);
+	CGImageDestinationAddImage(destination, self.CGImage, nil);
+	
+	if (!CGImageDestinationFinalize(destination)) {
+		NSLog(@"Failed to write image to");
+	}
+	return data;
+}
 
 
 

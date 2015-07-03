@@ -9,6 +9,8 @@
 #import "UIImageDemoVC.h"
 #import <UIImage+NNUtils.h>
 #import <NNProfiler.h>
+@import MobileCoreServices;
+@import ImageIO;
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -17,30 +19,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-	
-	
-	
-	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
-	
-	[NNProfiler start:@"warm up"];
-	_iv.image = [img imageByApplyingBlurWithRadius:1 tintColor:nil saturationDeltaFactor:1];
-	[NNProfiler end];
-
-	
-	[NNProfiler start:@"method1"];
-	_iv.image = [img imageByApplyingBlurWithRadius:1 tintColor:nil saturationDeltaFactor:1];
-	[NNProfiler end];
-	
-
-//	[NNProfiler start:@"method2"];
-//	_iv.image = [img imageByApplyingBlurWithRadius:10 optimized:NO tintColor:nil saturationDeltaFactor:1];
-//	[NNProfiler end];
+//	[self resizeBenchmark];
 }
 
 
 -(void)resizeBenchmark{
+	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
 	
+	[NNProfiler start:@"method1"];
+	for (int i=0; i<10; i++) {
+		[img resizeImageWithScale:0.5];
+	}
+	[NNProfiler end];
 }
+
+
+
+
+
 
 
 

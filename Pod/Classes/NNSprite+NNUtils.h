@@ -1,4 +1,4 @@
-#import <NNSprite.h>
+#import "NNSprite.h"
 
 @interface NNSprite (NNUtils)
 

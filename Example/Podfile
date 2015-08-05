@@ -2,7 +2,6 @@ source 'https://github.com/noughts/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'NNUtils', :exclusive => true do
-  pod "NNProfiler"
   pod "NNUtils", :path => "../"
 end
 

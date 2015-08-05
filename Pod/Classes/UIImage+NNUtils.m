@@ -7,7 +7,7 @@
 #import "NSURL+NNUtils.h"
 #import "UIImage+NNUtils.h"
 #import "UIImageEffects.h"
-#import <NNProfiler.h>
+#import "NNProfiler.h"
 
 
 @implementation UIImage (NNUtils)

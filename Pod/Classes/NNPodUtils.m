@@ -12,6 +12,7 @@
 -(instancetype)initWithPodName:(NSString*)podName{
 	if( self = [super init] ){
 		_cache = [NSCache new];
+		_podName = podName;
 	}
 	return self;
 }

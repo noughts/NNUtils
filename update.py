@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 """
 pod を更新してpushするスクリプトです。
@@ -31,4 +32,4 @@ def getVersion():
 version = getVersion();
 runCommand( "git tag "+ version );
 runCommand( "git push --tags" );
-runCommand( "pod repo push noughts" );
+runCommand( "pod repo push noughts --verbose" );

@@ -4,7 +4,7 @@ PODS:
   - NNProfiler (1.1.1):
     - NBULogStub
   - NNSprite (0.5.0)
-  - NNUtils (1.15.2):
+  - NNUtils (1.15.6):
     - AMPopTip
     - NNProfiler
     - NNSprite
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   NBULogStub: 398fa3535e3b368d6f1cb3b32c2ac0cb81cf350c
   NNProfiler: e2abbda27cd623b19848fa21d3c4e24732c9b648
   NNSprite: 3d8e7690951045dad4a7ad65f07ecf1f22bb909b
-  NNUtils: 3a6457da159c348a933b97e690a591b30dfcdc33
+  NNUtils: 5f7531564dc6fea6d9e7f9e5845d6929e5ce336f
 
 COCOAPODS: 0.38.2

@@ -19,5 +19,8 @@
 /// Cocoapodsのライブラリに含まれる画像はimageNamedを使って読み込むことができないので、シミュレートする
 -(UIImage*)imageNamed:(NSString*)name;
 
+/// このライブラリのBundleを返す
+-(NSBundle*)bundle;
+
 
 @end

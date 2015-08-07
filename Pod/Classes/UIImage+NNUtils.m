@@ -16,24 +16,34 @@ static NSOperationQueue* _imageProcessing_queue;
 
 /// 画像をエンコードなしでNSDataに変換
 /// mimetype => "image/jpg" | "image/png"
+-(NSData*)dataWithMimetype:(NSString *)mimetype metadata:(NSDictionary*)metadata{
+    NSArray* availableTypes = @[@"image/jpeg", @"image/png"];
+    NSAssert( [availableTypes containsObject:mimetype], @"mimetypeを正しく指定して下さい" );
+    
+    NSMutableData *imageData = [NSMutableData data];
+    CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)mimetype, NULL);
+    CGImageDestinationRef imageDestination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)imageData, uti, 1, NULL);
+    
+    if (imageDestination == NULL){
+        NSLog(@"Failed to create image destination");
+        imageData = nil;
+    } else {
+        CGImageDestinationAddImage(imageDestination, self.CGImage, (__bridge CFDictionaryRef)metadata);
+        if (CGImageDestinationFinalize(imageDestination) == NO){
+            NSLog(@"Failed to finalise");
+            imageData = nil;
+        }
+        CFRelease(imageDestination);
+    }
+    CFRelease(uti);
+    return imageData;
+}
+
+
+/// 画像をエンコードなしでNSDataに変換
+/// mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype{
-	NSMutableData *imageData = [NSMutableData data];
-	CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)mimetype, NULL);
-	CGImageDestinationRef imageDestination = CGImageDestinationCreateWithData((__bridge CFMutableDataRef)imageData, uti, 1, NULL);
-	
-	if (imageDestination == NULL){
-		NSLog(@"Failed to create image destination");
-		imageData = nil;
-	} else {
-		CGImageDestinationAddImage(imageDestination, self.CGImage, nil);
-		if (CGImageDestinationFinalize(imageDestination) == NO){
-			NSLog(@"Failed to finalise");
-			imageData = nil;
-		}
-		CFRelease(imageDestination);
-	}
-	CFRelease(uti);
-	return imageData;
+    return [self dataWithMimetype:mimetype metadata:nil];
 }
 
 

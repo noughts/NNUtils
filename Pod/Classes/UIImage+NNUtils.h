@@ -11,6 +11,8 @@
 @interface UIImage (NNUtils)
 
 /// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"
+-(NSData*)dataWithMimetype:(NSString *)mimetype metadata:(NSDictionary*)metadata;
+/// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype;
 
 

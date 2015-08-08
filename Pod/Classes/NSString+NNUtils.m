@@ -95,7 +95,7 @@
     
     /* 形態素解析 */
     while (tokenType != kCFStringTokenizerTokenNone) {
-        range = CFStringTokenizerGetCurrentTokenRange(tokenizer);
+//        range = CFStringTokenizerGetCurrentTokenRange(tokenizer);
         
         /* ローマ字を得る */
         CFTypeRef   latin = CFStringTokenizerCopyCurrentTokenAttribute(tokenizer, kCFStringTokenizerAttributeLatinTranscription);

@@ -20,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
+    [self testEncode];
 }
 
 
@@ -39,18 +40,25 @@
 
 
 
-
 -(void)testEncode{
-	UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
+	UIImage* img = [UIImage imageNamed:@"IMGP2838.JPG"];
 	
 	[NNProfiler start:@"method1"];
 	NSData* data = [img dataWithMimetype:@"image/jpeg"];
-	[NNProfiler end:@"method1"];
+	[NNProfiler end];
 	
 	[NNProfiler start:@"method2"];
 	NSData* data2 = UIImageJPEGRepresentation(img, 1);
-	[NNProfiler end:@"method2"];
-	
+	[NNProfiler end];
+    
+    
+    [NNProfiler start:@"method3"];
+    NSURL* url = [img saveJPEGFileToTemporaryDirectoryWithoutCompressWithMetadata:nil];
+    [NNProfiler end];
+    NSLog(@"%@", url);
+    
+    
+    
 	UIImage* img2 = [UIImage imageWithData:data];
 	_iv.image = img2;
 	NSLog( @"%@", @(data.length) );

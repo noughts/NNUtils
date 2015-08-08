@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D163DE91B7349C2007184D2 /* UIViewGlowDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D163DE81B7349C2007184D2 /* UIViewGlowDemoVC.m */; };
+		4D3BFDD71B7592D900EE22FA /* IMGP2838.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */; };
 		4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D40DDD11AB17172006C07D3 /* cheetah1136.png */; };
 		4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */; };
 		4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */; };
@@ -50,6 +51,7 @@
 		4B9CD79E5B439DA5128F6B1D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4D163DE71B7349C2007184D2 /* UIViewGlowDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewGlowDemoVC.h; sourceTree = "<group>"; };
 		4D163DE81B7349C2007184D2 /* UIViewGlowDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewGlowDemoVC.m; sourceTree = "<group>"; };
+		4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMGP2838.JPG; sourceTree = "<group>"; };
 		4D40DDD11AB17172006C07D3 /* cheetah1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetah1136.png; sourceTree = "<group>"; };
 		4D54F4A21B3D257F006ABA9C /* NNSpriteDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSpriteDemoVC.h; sourceTree = "<group>"; };
 		4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSpriteDemoVC.m; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				4D54F4A81B3D2C9E006ABA9C /* .demoVC */,
 				4D40DDD11AB17172006C07D3 /* cheetah1136.png */,
+				4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -320,6 +323,7 @@
 				4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */,
+				4D3BFDD71B7592D900EE22FA /* IMGP2838.JPG in Resources */,
 				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

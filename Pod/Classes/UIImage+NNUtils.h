@@ -10,6 +10,12 @@
 
 @interface UIImage (NNUtils)
 
+/// UIImagePNGRepresentation を使わずに PNG の UIImage を保存する
+-(NSURL*)savePNGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;
+-(NSURL*)savePNGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;
+-(NSURL*)saveJPEGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;
+-(NSURL*)saveJPEGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;
+
 /// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype metadata:(NSDictionary*)metadata;
 /// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"

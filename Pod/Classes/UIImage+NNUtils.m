@@ -14,6 +14,63 @@
 
 static NSOperationQueue* _imageProcessing_queue;
 
+
+#pragma mark - 保存系
+
+/// JpegにしてDocumentsディレクトリに保存
+-(NSURL*)saveJpegToDocumentDirectoryWithQuality:(CGFloat)quality error:(NSError**)error{
+    NSData* data = UIImageJPEGRepresentation( self, quality );
+    return [data saveToDocumentsDirectoryWithExtension:@"jpg" error:error];
+}
+
+/// JpegにしてTemporaryディレクトリに保存
+-(NSURL*)saveJpegToTemporaryDirectoryWithQuality:(CGFloat)quality error:(NSError**)error{
+    NSData* data = UIImageJPEGRepresentation( self, quality );
+    return [data saveToTemporaryDirectoryWithExtension:@"jpg" error:error];
+}
+
+
+/// UIImagePNGRepresentation を使わずに PNG の UIImage を保存する
+-(NSURL*)savePNGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
+    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"png"];
+    return [self saveFileWithoutCompressWithFiletype:@"png" metadata:metadata destinationURL:url];
+}
+-(NSURL*)savePNGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
+    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"png"];
+    return [self saveFileWithoutCompressWithFiletype:@"png" metadata:metadata destinationURL:url];
+}
+/// UIImageJPEGRepresentation を使わずに JPEG の UIImage を保存する
+-(NSURL*)saveJPEGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
+    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"jpg"];
+    return [self saveFileWithoutCompressWithFiletype:@"jpg" metadata:metadata destinationURL:url];
+}
+/// UIImageJPEGRepresentation を使わずに JPEG の UIImage を保存する
+-(NSURL*)saveJPEGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
+    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"jpg"];
+    return [self saveFileWithoutCompressWithFiletype:@"jpg" metadata:metadata destinationURL:url];
+}
+
+-(NSURL*)saveFileWithoutCompressWithFiletype:(NSString*)filetype metadata:(NSDictionary*)metadata destinationURL:(NSURL*)destinationURL{
+    CFStringRef type;
+    if( [filetype isEqual:@"jpg"] ){
+        type = kUTTypeJPEG;
+    } else if( [filetype isEqual:@"png"] ){
+         type = kUTTypePNG;
+    } else {
+        NSAssert( NO, @"filetypeを正しく指定して下さい" );
+        return nil;
+    }
+    CFURLRef cfurl = (__bridge CFURLRef) destinationURL;
+    CGImageDestinationRef destination = CGImageDestinationCreateWithURL(cfurl, type, 1, NULL);
+    CGImageDestinationAddImage(destination, self.CGImage, (__bridge CFDictionaryRef)metadata);
+    if (!CGImageDestinationFinalize(destination)) {
+        NSLog(@"Failed to write image to %@", destinationURL);
+    }
+    CFRelease(destination);
+    return destinationURL;
+}
+
+
 /// 画像をエンコードなしでNSDataに変換
 /// mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype metadata:(NSDictionary*)metadata{
@@ -53,6 +110,11 @@ static NSOperationQueue* _imageProcessing_queue;
 
 
 
+
+
+
+#pragma mark -
+
 /// 横長画像？
 -(BOOL)isLandscape{
 	return self.size.width > self.size.height;
@@ -67,33 +129,10 @@ static NSOperationQueue* _imageProcessing_queue;
 }
 
 
-/// JpegにしてDocumentsディレクトリに保存
--(NSURL*)saveJpegToDocumentDirectoryWithQuality:(CGFloat)quality error:(NSError**)error{
-	NSData* data = UIImageJPEGRepresentation( self, quality );
-	return [data saveToDocumentsDirectoryWithExtension:@"jpg" error:error];
-}
-
-/// JpegにしてTemporaryディレクトリに保存
--(NSURL*)saveJpegToTemporaryDirectoryWithQuality:(CGFloat)quality error:(NSError**)error{
-	NSData* data = UIImageJPEGRepresentation( self, quality );
-	return [data saveToTemporaryDirectoryWithExtension:@"jpg" error:error];
-}
 
 
 
 
-/// UIImageJPEGRepresentation を使わずに UIImage を保存する方法。再エンコードしなくていいが、UIImageJPEGRepresentationの1.7倍くらい時間かかる
--(NSURL*)saveWithoutReEncode{
-	NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"jpg"];
-	CFURLRef cfurl = (__bridge CFURLRef) url;
-	CGImageDestinationRef destination = CGImageDestinationCreateWithURL(cfurl, kUTTypeJPEG, 1, NULL);
-	CGImageDestinationAddImage(destination, self.CGImage, nil);
-	
-	if (!CGImageDestinationFinalize(destination)) {
-		NSLog(@"Failed to write image to %@", url);
-	}
-	return url;
-}
 
 
 /// UIImageJPEGRepresentation を使わずに UIImage を NSData にする。
@@ -106,6 +145,7 @@ static NSOperationQueue* _imageProcessing_queue;
 	if (!CGImageDestinationFinalize(destination)) {
 		NSLog(@"Failed to write image to");
 	}
+    CFRelease(destination);
 	return data;
 }
 

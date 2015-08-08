@@ -18,7 +18,10 @@ static NSOperationQueue* _imageProcessing_queue;
 /// mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype metadata:(NSDictionary*)metadata{
     NSArray* availableTypes = @[@"image/jpeg", @"image/png"];
-    NSAssert( [availableTypes containsObject:mimetype], @"mimetypeを正しく指定して下さい" );
+    if( [availableTypes containsObject:mimetype] == NO ){
+        NSAssert( NO, @"mimetypeを正しく指定して下さい" );
+        return nil;
+    }
     
     NSMutableData *imageData = [NSMutableData data];
     CFStringRef uti = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)mimetype, NULL);

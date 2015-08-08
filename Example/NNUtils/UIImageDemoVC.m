@@ -63,6 +63,9 @@
 	_iv.image = img2;
 	NSLog( @"%@", @(data.length) );
 	NSLog( @"%@", @(data2.length) );
+    
+    NSData* data3 = [NSData dataWithContentsOfURL:url];
+    NSLog( @"%@", @(data3.length) );
 }
 
 

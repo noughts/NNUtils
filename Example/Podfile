@@ -3,6 +3,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'NNUtils', :exclusive => true do
   pod "NNUtils", :path => "../"
+  pod "FrameAccessor"
+  pod "NBULog"
 end
 
 target 'Tests', :exclusive => true do

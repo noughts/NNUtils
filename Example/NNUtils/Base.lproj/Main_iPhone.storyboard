@@ -699,6 +699,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCZ-yU-NnH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBGButtonTap:" destination="lri-O5-vJe" eventType="touchUpInside" id="fsV-6Z-3c3"/>
+                                </connections>
+                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-C5-XHV">
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="568"/>
                                 <connections>
@@ -708,12 +718,20 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pCZ-yU-NnH" secondAttribute="trailing" id="3BA-zI-5wz"/>
+                            <constraint firstItem="rFA-60-iTG" firstAttribute="top" secondItem="pCZ-yU-NnH" secondAttribute="bottom" id="BeK-uG-oUf"/>
                             <constraint firstAttribute="trailing" secondItem="fTd-C5-XHV" secondAttribute="trailing" constant="100" id="HFb-Ta-SrR"/>
                             <constraint firstItem="rFA-60-iTG" firstAttribute="top" secondItem="fTd-C5-XHV" secondAttribute="bottom" id="YcJ-fm-uXU"/>
+                            <constraint firstItem="pCZ-yU-NnH" firstAttribute="leading" secondItem="hf1-7V-gst" secondAttribute="leading" id="avX-fQ-D8g"/>
+                            <constraint firstItem="pCZ-yU-NnH" firstAttribute="top" secondItem="hf1-7V-gst" secondAttribute="top" id="kpW-1x-nzB"/>
                             <constraint firstItem="fTd-C5-XHV" firstAttribute="top" secondItem="hf1-7V-gst" secondAttribute="top" id="n0V-vr-aHq"/>
                             <constraint firstItem="fTd-C5-XHV" firstAttribute="leading" secondItem="hf1-7V-gst" secondAttribute="leading" id="wYw-ro-beh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_bg_btn" destination="pCZ-yU-NnH" id="nuW-Ty-Eqh"/>
+                        <outlet property="_content_view" destination="fTd-C5-XHV" id="2c8-qB-zjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FES-vR-8Sd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

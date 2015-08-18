@@ -19,10 +19,14 @@
 
 -(IBAction)onButtonTap:(id)sender{
 	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
-//	vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-	self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
-	[self presentViewController:vc animated:YES completion:nil];
-	self.navigationController.modalPresentationStyle = UIModalPresentationFullScreen;/// 別のトランジションのために戻す
+	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
+		self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+		[self presentViewController:vc animated:NO completion:nil];
+		self.navigationController.modalPresentationStyle = UIModalPresentationFullScreen;/// 別のトランジションのために戻す
+	} else {
+		vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+		[self presentViewController:vc animated:NO completion:nil];
+	}
 }
 
 

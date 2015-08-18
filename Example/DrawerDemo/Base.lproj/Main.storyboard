@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="346" y="569"/>
         </scene>
-        <!--DrawerNC-->
+        <!--Navigation Controller-->
         <scene sceneID="rYr-YZ-Jj4">
             <objects>
-                <navigationController storyboardIdentifier="DrawerNC" automaticallyAdjustsScrollViewInsets="NO" id="Fv8-ls-pfy" customClass="DrawerNC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DrawerNC" automaticallyAdjustsScrollViewInsets="NO" id="Fv8-ls-pfy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iIP-cu-F6l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -34,18 +34,23 @@
 
 
 -(IBAction)onBGButtonTap:(id)sender{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
 	NSInteger translateX = 0;
 	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
 		translateX = -_content_view.width * 2;
 	} else {
-		translateX = --_content_view.width;
+		translateX = -_content_view.width;
 	}
 	[UIView animateWithDuration:0 delay:0 options:7<<16 animations:^{
 		_bg_btn.alpha = 0;
 		_content_view.transform = CGAffineTransformMakeTranslation(translateX, 0);
 		[self.view layoutIfNeeded];
 	} completion:^(BOOL finished) {
-		[self dismissViewControllerAnimated:NO completion:nil];
+		[super dismissViewControllerAnimated:NO completion:completion];
 	}];
 }
 

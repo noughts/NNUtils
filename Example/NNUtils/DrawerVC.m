@@ -7,6 +7,7 @@
 //
 
 #import "DrawerVC.h"
+#import <NBULog.h>
 
 
 @implementation DrawerVC
@@ -16,13 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-	
-	self.view.frame = CGRectMake(0, 0, 200, 200);
 }
 
 -(IBAction)onCloseButtonTap:(id)sender{
-	[self dismissViewControllerAnimated:YES completion:nil];
+	[self.parentViewController.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

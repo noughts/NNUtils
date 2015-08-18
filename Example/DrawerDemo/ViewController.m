@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import <UIViewController+NNUtils.h>
+#import "DrawerContainerVC.h"
 
-@implementation ViewController
+@implementation ViewController{
+	__weak DrawerContainerVC* _drawerContainer_vc;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -19,15 +22,19 @@
 
 
 -(IBAction)onOpenListButtonTap:(id)sender{
-	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
-	[self presentOverlayViewController:vc];
+	_drawerContainer_vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
+	[self presentOverlayViewController:_drawerContainer_vc];
 }
 
 
--(IBAction)onSettingsButtonTap:(id)sender{
+-(IBAction)onHomeButtonTap:(id)sender{
 	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerNC"];
 	[self presentViewController:vc animated:YES completion:nil];
 }
+
+
+
+
 
 
 @end

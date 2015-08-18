@@ -39,7 +39,14 @@
 }
 
 
+
+
+
 -(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
+	if( flag == NO ){
+		[super dismissViewControllerAnimated:NO completion:completion];
+		return;
+	}
 	NSInteger translateX = 0;
 	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
 		translateX = -_content_view.width * 2;

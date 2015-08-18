@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="FV7-Bs-6by">
                         <barButtonItem key="rightBarButtonItem" title="ホーム" id="yZM-TZ-qfO">
                             <connections>
-                                <action selector="onSettingsButtonTap:" destination="vXZ-lx-hvc" id="a0j-fC-E5n"/>
+                                <action selector="onHomeButtonTap:" destination="vXZ-lx-hvc" id="L2e-N4-PxJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -160,7 +160,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rkC-bq-55q">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Prk-CN-E52">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Prk-CN-E52">
                             <connections>
                                 <action selector="onCloseButtonTap:" destination="wr7-0S-aw2" id="aEH-vS-1zd"/>
                             </connections>

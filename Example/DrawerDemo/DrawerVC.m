@@ -25,12 +25,14 @@
 
 
 -(IBAction)onSettingsButtonTap:(id)sender{
-//	[self dismissViewControllerAnimated:NO completion:nil];
+	/// 構造上、ここからメインのVCへは到達できない仕様です。
+	UIResponder *responder = self;
+	while ((responder = [responder nextResponder])) {
+		NBULogInfo(@"%@", responder);
+	}
 	
 	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsNC"];
-	[self presentViewController:vc animated:YES completion:^{
-		
-	}];
+	[self presentViewController:vc animated:YES completion:nil];
 }
 
 

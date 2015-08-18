@@ -1,6 +1,9 @@
 source 'https://github.com/noughts/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
+
+pod "NNNotificationController"
+
 target 'NNUtils', :exclusive => true do
   pod "NNUtils", :path => "../"
   pod "FrameAccessor"

@@ -11,7 +11,7 @@
 #import "DrawerContainerVC.h"
 
 @implementation ViewController{
-	__weak DrawerContainerVC* _drawerContainer_vc;
+	__weak IBOutlet UILabel* _label_txt;
 }
 
 - (void)viewDidLoad {
@@ -22,8 +22,9 @@
 
 
 -(IBAction)onOpenListButtonTap:(id)sender{
-	_drawerContainer_vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
-	[self presentOverlayViewController:_drawerContainer_vc];
+	DrawerContainerVC* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
+
+	[self presentOverlayViewController:vc];
 }
 
 
@@ -33,6 +34,10 @@
 }
 
 
+
+-(void)onDrawerSettingsButtonTap:(id)sender{
+	
+}
 
 
 

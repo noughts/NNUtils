@@ -41,6 +41,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		98224513BE9E1A96CDFCD6ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F82CC9286BF751F3BCB9153 /* libPods.a */; };
 		CDD204AA56CC77FD708E85A4 /* libPods-DrawerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */; };
 		E0EAB3344A480D3D12EBF634 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78C856D91CCCFE408F8666E /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B452B71D580BACEC5D70801 /* Pods-DrawerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawerDemo/Pods-DrawerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		6F82CC9286BF751F3BCB9153 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909CB87192B6DD231A190C60 /* Pods-NNUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNUtils/Pods-NNUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CAB2CA3E0FB9D87010F820 /* NNUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NNUtils.podspec; path = ../NNUtils.podspec; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */,
+				98224513BE9E1A96CDFCD6ED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +272,7 @@
 				0498160B9F88FC0047719BDF /* libPods-NNUtils.a */,
 				D78C856D91CCCFE408F8666E /* libPods-Tests.a */,
 				83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */,
+				6F82CC9286BF751F3BCB9153 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -12,6 +12,8 @@ PODS:
   - NBULog (1.2.4):
     - CocoaLumberjack (>= 2.0.0)
   - NBULogStub (0.1.2)
+  - NNNotificationController (1.1.1):
+    - NBULog
   - NNProfiler (1.1.1):
     - NBULogStub
   - NNSprite (0.5.0)
@@ -23,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - FrameAccessor
   - NBULog
+  - NNNotificationController
   - NNUtils (from `../`)
 
 EXTERNAL SOURCES:
@@ -35,6 +38,7 @@ SPEC CHECKSUMS:
   FrameAccessor: 443a13e58e23a10ff22180da0897b28c3f6abf66
   NBULog: 4003be6706b97a7e376ab4171c666ac7c2fbc2b2
   NBULogStub: 398fa3535e3b368d6f1cb3b32c2ac0cb81cf350c
+  NNNotificationController: 5eed2a929b44f183b768088919639893b630f89e
   NNProfiler: e2abbda27cd623b19848fa21d3c4e24732c9b648
   NNSprite: 3d8e7690951045dad4a7ad65f07ecf1f22bb909b
   NNUtils: 2bd2f58e0f8ab3fc7e4a9a72ad9deca9bc0efd20

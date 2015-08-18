@@ -7,6 +7,14 @@ target 'NNUtils', :exclusive => true do
   pod "NBULog"
 end
 
+
+target 'DrawerDemo', :exclusive => true do
+	pod "NNUtils", :path => "../"
+	pod "FrameAccessor"
+	pod "NBULog"
+end
+
+
 target 'Tests', :exclusive => true do
   pod "NNUtils", :path => "../"
 end

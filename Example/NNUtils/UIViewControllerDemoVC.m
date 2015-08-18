@@ -31,7 +31,7 @@
 
 
 -(IBAction)onStandardPresentButtonTap:(id)sender{
-	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerContainerVC"];
+	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawerNC"];
 	[self presentViewController:vc animated:YES completion:nil];
 }
 

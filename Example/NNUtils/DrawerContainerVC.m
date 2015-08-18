@@ -17,14 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-	
-	NBULogInfo(@"%@", @(_content_view.width));
-	
+
 	_bg_btn.alpha = 0;
 	_content_view.transform = CGAffineTransformMakeTranslation(-_content_view.width, 0);
-	
-
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -39,9 +34,15 @@
 
 
 -(IBAction)onBGButtonTap:(id)sender{
+	NSInteger translateX = 0;
+	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
+		translateX = -_content_view.width * 2;
+	} else {
+		translateX = --_content_view.width;
+	}
 	[UIView animateWithDuration:0 delay:0 options:7<<16 animations:^{
 		_bg_btn.alpha = 0;
-		_content_view.transform = CGAffineTransformMakeTranslation(-_content_view.width, 0);
+		_content_view.transform = CGAffineTransformMakeTranslation(translateX, 0);
 		[self.view layoutIfNeeded];
 	} completion:^(BOOL finished) {
 		[self dismissViewControllerAnimated:NO completion:nil];

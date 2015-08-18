@@ -20,7 +20,11 @@
 }
 
 -(IBAction)onCloseButtonTap:(id)sender{
-	[self dismissViewControllerAnimated:YES completion:nil];
+	if( self.parentViewController.parentViewController ){
+		[self.parentViewController.parentViewController dismissViewControllerAnimated:YES completion:nil];
+	} else {
+		[self dismissViewControllerAnimated:YES completion:nil];
+	}
 }
 
 @end

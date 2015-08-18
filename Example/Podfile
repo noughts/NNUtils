@@ -2,7 +2,7 @@ source 'https://github.com/noughts/Specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 
-pod "NNNotificationController"
+
 
 target 'NNUtils', :exclusive => true do
   pod "NNUtils", :path => "../"
@@ -15,6 +15,7 @@ target 'DrawerDemo', :exclusive => true do
 	pod "NNUtils", :path => "../"
 	pod "FrameAccessor"
 	pod "NBULog"
+	pod "NNNotificationController"
 end
 
 

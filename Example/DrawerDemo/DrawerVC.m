@@ -19,9 +19,19 @@
     [super viewDidLoad];
 }
 
+
+#pragma mark - ボタン関係
+
+-(IBAction)onRowTap:(id)sender{
+	[self dismissViewControllerAnimated:YES completion:nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"onRowTap" object:self.parentViewController.parentViewController userInfo:@{@"hoge":@"fuga"}];
+}
+
 -(IBAction)onCloseButtonTap:(id)sender{
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 
 -(IBAction)onSettingsButtonTap:(id)sender{

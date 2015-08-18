@@ -24,6 +24,7 @@
 		4DD78FE11B82EF87005D5797 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD78FDF1B82EF87005D5797 /* LaunchScreen.xib */; };
 		4DD78FFB1B82F044005D5797 /* DrawerContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FF61B82F044005D5797 /* DrawerContainerVC.m */; };
 		4DD78FFD1B82F044005D5797 /* DrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FFA1B82F044005D5797 /* DrawerVC.m */; };
+		4DD790001B82F304005D5797 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FFF1B82F304005D5797 /* SettingsVC.m */; };
 		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
 		4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */; };
 		572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0498160B9F88FC0047719BDF /* libPods-NNUtils.a */; };
@@ -91,6 +92,8 @@
 		4DD78FF61B82F044005D5797 /* DrawerContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerContainerVC.m; sourceTree = "<group>"; };
 		4DD78FF91B82F044005D5797 /* DrawerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerVC.h; sourceTree = "<group>"; };
 		4DD78FFA1B82F044005D5797 /* DrawerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerVC.m; sourceTree = "<group>"; };
+		4DD78FFE1B82F304005D5797 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
+		4DD78FFF1B82F304005D5797 /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 		4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemoVC.h; sourceTree = "<group>"; };
 		4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemoVC.m; sourceTree = "<group>"; };
 		4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemo2VC.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 				4DD78FFA1B82F044005D5797 /* DrawerVC.m */,
 				4DD78FD71B82EF87005D5797 /* ViewController.h */,
 				4DD78FD81B82EF87005D5797 /* ViewController.m */,
+				4DD78FFE1B82F304005D5797 /* SettingsVC.h */,
+				4DD78FFF1B82F304005D5797 /* SettingsVC.m */,
 			);
 			name = .controllers;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				4DD78FD31B82EF87005D5797 /* main.m in Sources */,
 				4DD78FFD1B82F044005D5797 /* DrawerVC.m in Sources */,
 				4DD78FFB1B82F044005D5797 /* DrawerContainerVC.m in Sources */,
+				4DD790001B82F304005D5797 /* SettingsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

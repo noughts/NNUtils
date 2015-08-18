@@ -20,11 +20,28 @@
 }
 
 -(IBAction)onCloseButtonTap:(id)sender{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(IBAction)onSettingsButtonTap:(id)sender{
+//	[self dismissViewControllerAnimated:NO completion:nil];
+	
+	UIViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SettingsNC"];
+	[self presentViewController:vc animated:YES completion:^{
+		
+	}];
+}
+
+
+
+-(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
 	if( self.parentViewController.parentViewController ){
-		[self.parentViewController.parentViewController dismissViewControllerAnimated:YES completion:nil];
+		[self.parentViewController.parentViewController dismissViewControllerAnimated:flag completion:completion];
 	} else {
-		[self dismissViewControllerAnimated:YES completion:nil];
+		[super dismissViewControllerAnimated:flag completion:completion];
 	}
 }
+
 
 @end

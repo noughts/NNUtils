@@ -33,12 +33,7 @@
 }
 
 
--(IBAction)onBGButtonTap:(id)sender{
-	[self dismissViewControllerAnimated:YES completion:nil];
-}
-
-
--(void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion{
+-(IBAction)onCloseButtonTap:(id)sender{
 	NSInteger translateX = 0;
 	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
 		translateX = -_content_view.width * 2;
@@ -50,9 +45,12 @@
 		_content_view.transform = CGAffineTransformMakeTranslation(translateX, 0);
 		[self.view layoutIfNeeded];
 	} completion:^(BOOL finished) {
-		[super dismissViewControllerAnimated:NO completion:completion];
+		[self dismissViewControllerAnimated:NO completion:nil];
 	}];
 }
+
+
+
 
 
 

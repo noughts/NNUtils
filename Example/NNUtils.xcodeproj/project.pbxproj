@@ -15,6 +15,10 @@
 		4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */; };
 		4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */; };
 		4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */; };
+		4DD78F6F1B82D9EF005D5797 /* UIViewControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */; };
+		4DD78F721B82DAFB005D5797 /* DrawerNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78F711B82DAFB005D5797 /* DrawerNC.m */; };
+		4DD78F751B82DB0C005D5797 /* DrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78F741B82DB0C005D5797 /* DrawerVC.m */; };
+		4DD78F781B82DE31005D5797 /* DrawerContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78F771B82DE31005D5797 /* DrawerContainerVC.m */; };
 		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
 		4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */; };
 		572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0498160B9F88FC0047719BDF /* libPods-NNUtils.a */; };
@@ -62,6 +66,14 @@
 		4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTipVC.m; sourceTree = "<group>"; };
 		4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageDemoVC.h; sourceTree = "<group>"; };
 		4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageDemoVC.m; sourceTree = "<group>"; };
+		4DD78F6D1B82D9EF005D5797 /* UIViewControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerDemoVC.h; sourceTree = "<group>"; };
+		4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerDemoVC.m; sourceTree = "<group>"; };
+		4DD78F701B82DAFB005D5797 /* DrawerNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerNC.h; sourceTree = "<group>"; };
+		4DD78F711B82DAFB005D5797 /* DrawerNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerNC.m; sourceTree = "<group>"; };
+		4DD78F731B82DB0C005D5797 /* DrawerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerVC.h; sourceTree = "<group>"; };
+		4DD78F741B82DB0C005D5797 /* DrawerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerVC.m; sourceTree = "<group>"; };
+		4DD78F761B82DE31005D5797 /* DrawerContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerContainerVC.h; sourceTree = "<group>"; };
+		4DD78F771B82DE31005D5797 /* DrawerContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerContainerVC.m; sourceTree = "<group>"; };
 		4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemoVC.h; sourceTree = "<group>"; };
 		4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemoVC.m; sourceTree = "<group>"; };
 		4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemo2VC.h; sourceTree = "<group>"; };
@@ -132,6 +144,14 @@
 				4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */,
 				4D163DE71B7349C2007184D2 /* UIViewGlowDemoVC.h */,
 				4D163DE81B7349C2007184D2 /* UIViewGlowDemoVC.m */,
+				4DD78F6D1B82D9EF005D5797 /* UIViewControllerDemoVC.h */,
+				4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */,
+				4DD78F701B82DAFB005D5797 /* DrawerNC.h */,
+				4DD78F711B82DAFB005D5797 /* DrawerNC.m */,
+				4DD78F731B82DB0C005D5797 /* DrawerVC.h */,
+				4DD78F741B82DB0C005D5797 /* DrawerVC.m */,
+				4DD78F761B82DE31005D5797 /* DrawerContainerVC.h */,
+				4DD78F771B82DE31005D5797 /* DrawerContainerVC.m */,
 			);
 			name = .demoVC;
 			sourceTree = "<group>";
@@ -408,9 +428,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */,
+				4DD78F781B82DE31005D5797 /* DrawerContainerVC.m in Sources */,
+				4DD78F721B82DAFB005D5797 /* DrawerNC.m in Sources */,
 				4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */,
+				4DD78F751B82DB0C005D5797 /* DrawerVC.m in Sources */,
 				4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */,
 				6003F59E195388D20070C39A /* NNAppDelegate.m in Sources */,
+				4DD78F6F1B82D9EF005D5797 /* UIViewControllerDemoVC.m in Sources */,
 				4D163DE91B7349C2007184D2 /* UIViewGlowDemoVC.m in Sources */,
 				4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */,
 				4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */,

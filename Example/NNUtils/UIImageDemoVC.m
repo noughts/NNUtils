@@ -58,14 +58,20 @@
     NSLog(@"%@", url);
     
     
+    [NNProfiler start:@"method4"];
+    NSData* data3 = [NSData dataWithContentsOfURL:url];
+    UIImage* thumb = [UIImage resizeUsingImageIO:data3 maxPixelSize:200];
+    NSURL* url2 = [thumb saveJPEGFileToTemporaryDirectoryWithoutCompressWithMetadata:nil];
+    [NNProfiler end];
     
-	UIImage* img2 = [UIImage imageWithData:data];
-	_iv.image = img2;
+    
+    NSData* data4 = [NSData dataWithContentsOfURL:url2];
+    UIImage* thumb2 = [UIImage imageWithData:data4];
+	_iv.image = thumb2;
 	NSLog( @"%@", @(data.length) );
 	NSLog( @"%@", @(data2.length) );
     
-    NSData* data3 = [NSData dataWithContentsOfURL:url];
-    NSLog( @"%@", @(data3.length) );
+
 }
 
 

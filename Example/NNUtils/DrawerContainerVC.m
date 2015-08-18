@@ -24,20 +24,24 @@
 	_bg_btn.alpha = 0;
 	_content_view.transform = CGAffineTransformMakeTranslation(-_content_view.width, 0);
 	
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
 	[UIView animateWithDuration:0 delay:0 options:7<<16 animations:^{
 		_bg_btn.alpha = 0.25;
 		_content_view.transform = CGAffineTransformIdentity;
 	} completion:^(BOOL finished) {
-
+		
 	}];
 }
 
 
 -(IBAction)onBGButtonTap:(id)sender{
-	_content_view.transform = CGAffineTransformIdentity;
 	[UIView animateWithDuration:0 delay:0 options:7<<16 animations:^{
 		_bg_btn.alpha = 0;
-		_content_view.transform = CGAffineTransformMakeTranslation(-_content_view.width*2, 0);
+		_content_view.transform = CGAffineTransformMakeTranslation(-_content_view.width, 0);
 		[self.view layoutIfNeeded];
 	} completion:^(BOOL finished) {
 		[self dismissViewControllerAnimated:NO completion:nil];

@@ -755,9 +755,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4B-Ek-Jy5">
+                                <rect key="frame" x="95" y="269" width="30" height="30"/>
+                                <state key="normal" title="設定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="H4B-Ek-Jy5" secondAttribute="centerX" id="a9P-vg-ago"/>
+                            <constraint firstAttribute="centerY" secondItem="H4B-Ek-Jy5" secondAttribute="centerY" id="hno-Z4-dnI"/>
                             <constraint firstItem="0i1-qJ-MUL" firstAttribute="top" secondItem="ZVQ-0c-XvQ" secondAttribute="bottom" id="loE-fW-Bzq"/>
                             <constraint firstAttribute="trailing" secondItem="ZVQ-0c-XvQ" secondAttribute="trailing" id="sjo-JA-r8v"/>
                         </constraints>
@@ -774,6 +782,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Jg-ru-og8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="982" y="2481"/>
+        </scene>
+        <!--設定画面-->
+        <scene sceneID="EQG-PM-t0n">
+            <objects>
+                <viewController id="I0A-E7-qZ2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0q8-iO-cfu"/>
+                        <viewControllerLayoutGuide type="bottom" id="PFJ-ij-4PH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jvn-Sr-LCo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="設定画面" id="gGG-DY-Bas">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="aPS-gt-QEu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c98-PZ-CZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="2481"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cjq-bH-ECs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYT-xi-dlE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VGV-We-eMK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I0A-E7-qZ2" kind="relationship" relationship="rootViewController" id="Bc1-48-ugJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFS-iS-jdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1322" y="2481"/>
         </scene>
     </scenes>
     <resources>

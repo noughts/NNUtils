@@ -12,6 +12,24 @@
 
 
 
+/// 背景を透過してViewControllerをモーダル表示。iOS7でトランジションが効かないので、トランジションは表示するVCのviewDidAppearなどで自前で実装しましょう。
+-(void)presentOverlayViewController:(UIViewController *)vc{
+	if([[UIDevice currentDevice].systemVersion floatValue] < 8.0){
+		self.navigationController.modalPresentationStyle = UIModalPresentationCurrentContext;
+		[self presentViewController:vc animated:NO completion:nil];
+		self.navigationController.modalPresentationStyle = UIModalPresentationFullScreen;/// 別のトランジションのために戻す
+	} else {
+		vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+		[self presentViewController:vc animated:NO completion:nil];
+	}
+}
+
+
+
+
+
+
+
 
 /// 指定したViewControllerを子として追加
 - (void)addContentController:(UIViewController *)content animated:(BOOL)animated{

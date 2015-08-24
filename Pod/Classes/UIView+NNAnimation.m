@@ -7,42 +7,11 @@
 //
 
 #import "UIView+NNAnimation.h"
-#import "UIView+EasingFunctions.h"
-#import "easing.h"
 
 @implementation UIView (NNAnimation)
 
 
 
-
-/// ポップして表示アニメ
--(void)popInAnime:(float)delay{
-	self.hidden = NO;
-	self.transform = CGAffineTransformMakeScale(0,0);
-	
-	[UIView animateWithDuration:0.2 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
-		[self setEasingFunction:BackEaseOut forKeyPath:@"transform"];
-		self.transform = CGAffineTransformMakeScale(1.0, 1.0);
-	} completion:^(BOOL finished) {
-		[self removeEasingFunctionForKeyPath:@"transform"];
-	}];
-}
-
-
-/// 微妙に拡大&ポップしながらフェードイン
--(void)fadePopIn:(float)delay{
-	self.transform = CGAffineTransformMakeScale( 0.9, 0.9 );
-	self.hidden = NO;
-	self.alpha = 0;
-	
-	[UIView animateWithDuration:0.25 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
-		[self setEasingFunction:BackEaseOut forKeyPath:@"transform"];
-		self.transform = CGAffineTransformMakeScale( 1, 1 );
-		self.alpha = 1;
-	} completion:^(BOOL finished) {
-		[self removeEasingFunctionForKeyPath:@"transform"];
-	}];
-}
 
 
 /// フェードイン
@@ -68,20 +37,6 @@
 	}];
 }
 
-/// 微妙に拡大しながらフェードイン
--(void)fadeInWithScale:(float)delay{
-	self.transform = CGAffineTransformMakeScale( 0.9, 0.9 );
-	self.hidden = NO;
-	self.alpha = 0;
-	
-	[UIView animateWithDuration:0.25 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
-		[self setEasingFunction:QuarticEaseOut forKeyPath:@"transform"];
-		self.transform = CGAffineTransformMakeScale( 1, 1 );
-		self.alpha = 1;
-	} completion:^(BOOL finished) {
-		[self removeEasingFunctionForKeyPath:@"transform"];
-	}];
-}
 
 
 /// フェードアウト
@@ -121,6 +76,12 @@
 	}];
 }
 
+
+
+/// 以下は、AHEasing が最新のcocoapodsだと依存できないので、解決できるまでオミット
+
+
+/*
 /// 微妙に縮小しながらフェードアウト
 -(void)fadeOutWithScale:(float)delay{
 	[UIView animateWithDuration:0.2 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
@@ -137,6 +98,53 @@
 
 
 
+/// 微妙に拡大しながらフェードイン
+-(void)fadeInWithScale:(float)delay{
+	self.transform = CGAffineTransformMakeScale( 0.9, 0.9 );
+	self.hidden = NO;
+	self.alpha = 0;
+	
+	[UIView animateWithDuration:0.25 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+		[self setEasingFunction:QuarticEaseOut forKeyPath:@"transform"];
+		self.transform = CGAffineTransformMakeScale( 1, 1 );
+		self.alpha = 1;
+	} completion:^(BOOL finished) {
+		[self removeEasingFunctionForKeyPath:@"transform"];
+	}];
+}
+ 
+ 
+ /// ポップして表示アニメ
+ -(void)popInAnime:(float)delay{
+	self.hidden = NO;
+	self.transform = CGAffineTransformMakeScale(0,0);
+	
+	[UIView animateWithDuration:0.2 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+ [self setEasingFunction:BackEaseOut forKeyPath:@"transform"];
+ self.transform = CGAffineTransformMakeScale(1.0, 1.0);
+	} completion:^(BOOL finished) {
+ [self removeEasingFunctionForKeyPath:@"transform"];
+	}];
+ }
+ 
+ 
+ /// 微妙に拡大&ポップしながらフェードイン
+ -(void)fadePopIn:(float)delay{
+	self.transform = CGAffineTransformMakeScale( 0.9, 0.9 );
+	self.hidden = NO;
+	self.alpha = 0;
+	
+	[UIView animateWithDuration:0.25 delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+ [self setEasingFunction:BackEaseOut forKeyPath:@"transform"];
+ self.transform = CGAffineTransformMakeScale( 1, 1 );
+ self.alpha = 1;
+	} completion:^(BOOL finished) {
+ [self removeEasingFunctionForKeyPath:@"transform"];
+	}];
+ }
+
+
+ */
 
 
 

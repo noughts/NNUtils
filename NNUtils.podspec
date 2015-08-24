@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NNUtils"
-  s.version          = "1.18.0"
+  s.version          = "1.18.1"
   s.summary          = "hoge"
   s.description      = <<-DESC
                        fuga
@@ -34,5 +34,4 @@ Pod::Spec.new do |s|
   s.dependency "AMPopTip"
   s.dependency "NNSprite"
   s.dependency "NNProfiler"
-  s.dependency "UIView+EasingFunctions"
 end

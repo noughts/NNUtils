@@ -1,4 +1,5 @@
 PODS:
+  - AHEasing (1.2)
   - AMPopTip (1.7.2)
   - CocoaLumberjack (2.0.1):
     - CocoaLumberjack/Default (= 2.0.1)
@@ -17,10 +18,18 @@ PODS:
   - NNProfiler (1.1.1):
     - NBULogStub
   - NNSprite (0.5.0)
-  - NNUtils (1.16.0):
+  - NNUtils (1.17.0):
+    - AHEasing
     - AMPopTip
     - NNProfiler
     - NNSprite
+    - UIView+EasingFunctions
+  - UIView+EasingFunctions (0.0.2):
+    - UIView+EasingFunctions/Bare (= 0.0.2)
+    - UIView+EasingFunctions/WithAHEasing (= 0.0.2)
+  - UIView+EasingFunctions/Bare (0.0.2)
+  - UIView+EasingFunctions/WithAHEasing (0.0.2):
+    - AHEasing
 
 DEPENDENCIES:
   - FrameAccessor
@@ -33,6 +42,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
+  AHEasing: 847f583bcd83a2bb850e38ccdb26d22e2593f34d
   AMPopTip: c59bb65d9fd230f0dceb5fbb5c92560b649f0195
   CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
   FrameAccessor: 443a13e58e23a10ff22180da0897b28c3f6abf66
@@ -41,6 +51,7 @@ SPEC CHECKSUMS:
   NNNotificationController: 5eed2a929b44f183b768088919639893b630f89e
   NNProfiler: e2abbda27cd623b19848fa21d3c4e24732c9b648
   NNSprite: 3d8e7690951045dad4a7ad65f07ecf1f22bb909b
-  NNUtils: 2bd2f58e0f8ab3fc7e4a9a72ad9deca9bc0efd20
+  NNUtils: 6d1bc93f27a6f8245b0ff56a73f8e5cb0133c280
+  UIView+EasingFunctions: 6d0194f58ddeb8c2d380d016cb54b593fcbb2482
 
 COCOAPODS: 0.38.2

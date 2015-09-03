@@ -10,6 +10,9 @@
 
 @interface NSString (NNUtils)
 
+/// 自身が数字のみで構成されているかチェック
+-(BOOL)isNumeric;
+
 /// 自身がアルファベットと数字のみで構成されているかチェック
 -(BOOL)isAlphaNumeric;
 

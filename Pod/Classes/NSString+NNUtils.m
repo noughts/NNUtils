@@ -10,6 +10,12 @@
 
 @implementation NSString (NNUtils)
 
+/// 自身が数字のみで構成されているかチェック
+-(BOOL)isNumeric{
+	NSCharacterSet *digitCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+	return [self checkCompareStringWithCharSet:digitCharSet];
+}
+
 /// 自身がアルファベットと数字のみで構成されているかチェック
 -(BOOL)isAlphaNumeric{
 	return [self checkCompareStringWithCharSet:[NSCharacterSet alphanumericCharacterSet]];

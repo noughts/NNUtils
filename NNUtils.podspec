@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NNUtils"
-  s.version          = "1.18.2"
+  s.version          = "1.19.0"
   s.summary          = "hoge"
   s.description      = <<-DESC
                        fuga
@@ -34,4 +34,5 @@ Pod::Spec.new do |s|
   s.dependency "AMPopTip"
   s.dependency "NNSprite"
   s.dependency "NNProfiler"
+  s.dependency "NSDate-Escort"
 end

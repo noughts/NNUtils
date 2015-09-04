@@ -12,6 +12,6 @@
 
 
 /// 相対時刻を返す
-- (NSString *)getRelativeString;
+- (NSString *)relativeString;
 
 @end

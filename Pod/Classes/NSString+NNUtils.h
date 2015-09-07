@@ -10,6 +10,9 @@
 
 @interface NSString (NNUtils)
 
+/// iOS7以前用のcontainsString;
+-(BOOL)containsStringForiOS7:(NSString *)aString;
+
 /// 自身が数字のみで構成されているかチェック
 -(BOOL)isNumeric;
 

@@ -10,7 +10,8 @@
 // :: Framework ::
 #import <NSString+NNUtils.h>
 #import <UITableViewCell+AppearanceProxy.h>
-
+#import <NSString+NNUtils.h>
+#import <NBULog.h>
 
 @implementation NNAppDelegate
 
@@ -29,6 +30,9 @@
 	[[UITableViewCell appearance] setSelectedBackgroundView:view];
 	 */
 
+	NSString* str = @"hogefuga";
+	NBULogInfo(@"%@", @([str containsStringForiOS7:@"oge"]));
+	
     return YES;
 }
 

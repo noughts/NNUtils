@@ -17,7 +17,7 @@ PODS:
   - NNProfiler (1.1.1):
     - NBULogStub
   - NNSprite (0.5.0)
-  - NNUtils (1.18.2):
+  - NNUtils (1.19.1):
     - AMPopTip
     - NNProfiler
     - NNSprite
@@ -43,7 +43,7 @@ SPEC CHECKSUMS:
   NNNotificationController: 5eed2a929b44f183b768088919639893b630f89e
   NNProfiler: e2abbda27cd623b19848fa21d3c4e24732c9b648
   NNSprite: 3d8e7690951045dad4a7ad65f07ecf1f22bb909b
-  NNUtils: 01d710800eaf93c4e0622f272a5b585253e78318
+  NNUtils: babce3d22b35f8bfb0a66195043ac1492267d29c
   NSDate-Escort: 2b9a6a3c9fe5a5c84fbdf1e9d55b2f9952deb15b
 
 COCOAPODS: 0.38.2

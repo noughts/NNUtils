@@ -10,6 +10,16 @@
 
 @implementation NSString (NNUtils)
 
+
+/// iOS7以前用のcontainsString
+-(BOOL)containsStringForiOS7:(NSString *)aString{
+	if ([self rangeOfString:aString].location != NSNotFound) {
+		return YES;
+	}
+	return NO;
+}
+
+
 /// 自身が数字のみで構成されているかチェック
 -(BOOL)isNumeric{
 	NSCharacterSet *digitCharSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];

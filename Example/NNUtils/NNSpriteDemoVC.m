@@ -9,6 +9,7 @@
 #import "NNSpriteDemoVC.h"
 #import <NNSprite/NNSprite.h>
 #import <NNSprite+NNUtils.h>
+#import <NNUtils.h>
 
 @implementation NNSpriteDemoVC{
 	__weak IBOutlet NNSprite* _sprite;
@@ -20,6 +21,14 @@
 	_sprite.layer.cornerRadius = _sprite.frame.size.height/2;
 }
 
+
+//
+//-(void)viewDidAppear:(BOOL)animated{
+//	[super viewDidAppear:animated];
+//	[NNUtils showAlertFromViewController:self message:@"hoge" handler:^(UIAlertAction *action) {
+//		NSLog(@"hoge");
+//	}];
+//}
 
 -(IBAction)onStartButtonTap:(id)sender{
 	[_sprite startBeatAnimationWithInterval:30];

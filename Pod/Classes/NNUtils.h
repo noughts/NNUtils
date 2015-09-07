@@ -10,6 +10,9 @@
 
 @interface NNUtils : NSObject
 
+/// OKボタンを押して処理を実行できるアラートを表示
++(void)showAlertFromViewController:(UIViewController*)fromViewController message:(NSString*)message handler:(void (^)(UIAlertAction *action))handler;
+
 /// 指定したレンジ内のランダム数を返す
 +(CGFloat)randWithMin:(CGFloat)min max:(CGFloat)max;
 

@@ -27,6 +27,19 @@
 	[alert show];
 }
 
+
+/// OKボタンを押して処理を実行できるアラートを表示
++(void)showAlertFromViewController:(UIViewController*)fromViewController message:(NSString*)message handler:(void (^)(UIAlertAction *action))handler{
+	UIAlertController* vc = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertAction* action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:handler];
+	[vc addAction:action];
+	[fromViewController presentViewController:vc animated:YES completion:nil];
+}
+
+
+
+
+
 /// JavaScript の setTimetout
 +(void)setTimeout:(void(^)(void))block delay:(float)delay{
 	[NSTimer scheduledTimerWithTimeInterval:delay target:[NSBlockOperation blockOperationWithBlock:block] selector:@selector(main) userInfo:nil repeats:NO];

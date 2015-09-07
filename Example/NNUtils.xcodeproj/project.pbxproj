@@ -15,16 +15,6 @@
 		4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */; };
 		4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */; };
 		4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */; };
-		4DD78F6F1B82D9EF005D5797 /* UIViewControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */; };
-		4DD78FD31B82EF87005D5797 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FD21B82EF87005D5797 /* main.m */; };
-		4DD78FD61B82EF87005D5797 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FD51B82EF87005D5797 /* AppDelegate.m */; };
-		4DD78FD91B82EF87005D5797 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FD81B82EF87005D5797 /* ViewController.m */; };
-		4DD78FDC1B82EF87005D5797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DD78FDA1B82EF87005D5797 /* Main.storyboard */; };
-		4DD78FDE1B82EF87005D5797 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DD78FDD1B82EF87005D5797 /* Images.xcassets */; };
-		4DD78FE11B82EF87005D5797 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DD78FDF1B82EF87005D5797 /* LaunchScreen.xib */; };
-		4DD78FFB1B82F044005D5797 /* DrawerContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FF61B82F044005D5797 /* DrawerContainerVC.m */; };
-		4DD78FFD1B82F044005D5797 /* DrawerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FFA1B82F044005D5797 /* DrawerVC.m */; };
-		4DD790001B82F304005D5797 /* SettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD78FFF1B82F304005D5797 /* SettingsVC.m */; };
 		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
 		4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */; };
 		572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0498160B9F88FC0047719BDF /* libPods-NNUtils.a */; };
@@ -41,8 +31,6 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		98224513BE9E1A96CDFCD6ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F82CC9286BF751F3BCB9153 /* libPods.a */; };
-		CDD204AA56CC77FD708E85A4 /* libPods-DrawerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */; };
 		E0EAB3344A480D3D12EBF634 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78C856D91CCCFE408F8666E /* libPods-Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +47,6 @@
 /* Begin PBXFileReference section */
 		0498160B9F88FC0047719BDF /* libPods-NNUtils.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NNUtils.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1974E828D5C0856B724274C0 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		297C316EF3E7C1EA387459D6 /* Pods-DrawerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrawerDemo/Pods-DrawerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		45B15F142175906A8B33602D /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B9CD79E5B439DA5128F6B1D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4D163DE71B7349C2007184D2 /* UIViewGlowDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewGlowDemoVC.h; sourceTree = "<group>"; };
@@ -75,26 +62,6 @@
 		4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTipVC.m; sourceTree = "<group>"; };
 		4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageDemoVC.h; sourceTree = "<group>"; };
 		4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageDemoVC.m; sourceTree = "<group>"; };
-		4DD78F6D1B82D9EF005D5797 /* UIViewControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerDemoVC.h; sourceTree = "<group>"; };
-		4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerDemoVC.m; sourceTree = "<group>"; };
-		4DD78FCE1B82EF87005D5797 /* DrawerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DD78FD11B82EF87005D5797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DD78FD21B82EF87005D5797 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4DD78FD41B82EF87005D5797 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4DD78FD51B82EF87005D5797 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4DD78FD71B82EF87005D5797 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4DD78FD81B82EF87005D5797 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4DD78FDB1B82EF87005D5797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4DD78FDD1B82EF87005D5797 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4DD78FE01B82EF87005D5797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4DD78FEB1B82EF87005D5797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DD78FEC1B82EF87005D5797 /* DrawerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawerDemoTests.m; sourceTree = "<group>"; };
-		4DD78FF51B82F044005D5797 /* DrawerContainerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerContainerVC.h; sourceTree = "<group>"; };
-		4DD78FF61B82F044005D5797 /* DrawerContainerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerContainerVC.m; sourceTree = "<group>"; };
-		4DD78FF91B82F044005D5797 /* DrawerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerVC.h; sourceTree = "<group>"; };
-		4DD78FFA1B82F044005D5797 /* DrawerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerVC.m; sourceTree = "<group>"; };
-		4DD78FFE1B82F304005D5797 /* SettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsVC.h; sourceTree = "<group>"; };
-		4DD78FFF1B82F304005D5797 /* SettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsVC.m; sourceTree = "<group>"; };
 		4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemoVC.h; sourceTree = "<group>"; };
 		4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemoVC.m; sourceTree = "<group>"; };
 		4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemo2VC.h; sourceTree = "<group>"; };
@@ -118,9 +85,6 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6B452B71D580BACEC5D70801 /* Pods-DrawerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrawerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrawerDemo/Pods-DrawerDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		6F82CC9286BF751F3BCB9153 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DrawerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		909CB87192B6DD231A190C60 /* Pods-NNUtils.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNUtils.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NNUtils/Pods-NNUtils.debug.xcconfig"; sourceTree = "<group>"; };
 		C5CAB2CA3E0FB9D87010F820 /* NNUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NNUtils.podspec; path = ../NNUtils.podspec; sourceTree = "<group>"; };
 		D08FD69F15E3AA86903A9879 /* Pods-NNUtils.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NNUtils.release.xcconfig"; path = "Pods/Target Support Files/Pods-NNUtils/Pods-NNUtils.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,14 +92,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4DD78FCB1B82EF87005D5797 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDD204AA56CC77FD708E85A4 /* libPods-DrawerDemo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6003F587195388D20070C39A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +100,6 @@
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */,
-				98224513BE9E1A96CDFCD6ED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,65 +132,8 @@
 				4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */,
 				4D163DE71B7349C2007184D2 /* UIViewGlowDemoVC.h */,
 				4D163DE81B7349C2007184D2 /* UIViewGlowDemoVC.m */,
-				4DD78F6D1B82D9EF005D5797 /* UIViewControllerDemoVC.h */,
-				4DD78F6E1B82D9EF005D5797 /* UIViewControllerDemoVC.m */,
 			);
 			name = .demoVC;
-			sourceTree = "<group>";
-		};
-		4DD78FCF1B82EF87005D5797 /* DrawerDemo */ = {
-			isa = PBXGroup;
-			children = (
-				4DD78FF41B82F00F005D5797 /* .controllers */,
-				4DD78FD41B82EF87005D5797 /* AppDelegate.h */,
-				4DD78FD51B82EF87005D5797 /* AppDelegate.m */,
-				4DD78FDA1B82EF87005D5797 /* Main.storyboard */,
-				4DD78FDD1B82EF87005D5797 /* Images.xcassets */,
-				4DD78FDF1B82EF87005D5797 /* LaunchScreen.xib */,
-				4DD78FD01B82EF87005D5797 /* Supporting Files */,
-			);
-			path = DrawerDemo;
-			sourceTree = "<group>";
-		};
-		4DD78FD01B82EF87005D5797 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4DD78FD11B82EF87005D5797 /* Info.plist */,
-				4DD78FD21B82EF87005D5797 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DD78FE91B82EF87005D5797 /* DrawerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				4DD78FEC1B82EF87005D5797 /* DrawerDemoTests.m */,
-				4DD78FEA1B82EF87005D5797 /* Supporting Files */,
-			);
-			path = DrawerDemoTests;
-			sourceTree = "<group>";
-		};
-		4DD78FEA1B82EF87005D5797 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4DD78FEB1B82EF87005D5797 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DD78FF41B82F00F005D5797 /* .controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4DD78FF51B82F044005D5797 /* DrawerContainerVC.h */,
-				4DD78FF61B82F044005D5797 /* DrawerContainerVC.m */,
-				4DD78FF91B82F044005D5797 /* DrawerVC.h */,
-				4DD78FFA1B82F044005D5797 /* DrawerVC.m */,
-				4DD78FD71B82EF87005D5797 /* ViewController.h */,
-				4DD78FD81B82EF87005D5797 /* ViewController.m */,
-				4DD78FFE1B82F304005D5797 /* SettingsVC.h */,
-				4DD78FFF1B82F304005D5797 /* SettingsVC.m */,
-			);
-			name = .controllers;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -244,8 +142,6 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* NNUtils */,
 				6003F5B5195388D20070C39A /* Tests */,
-				4DD78FCF1B82EF87005D5797 /* DrawerDemo */,
-				4DD78FE91B82EF87005D5797 /* DrawerDemoTests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				994176685FD2A01DF1F3917E /* Pods */,
@@ -257,7 +153,6 @@
 			children = (
 				6003F58A195388D20070C39A /* NNUtils.app */,
 				6003F5AE195388D20070C39A /* Tests.xctest */,
-				4DD78FCE1B82EF87005D5797 /* DrawerDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,8 +166,6 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				0498160B9F88FC0047719BDF /* libPods-NNUtils.a */,
 				D78C856D91CCCFE408F8666E /* libPods-Tests.a */,
-				83645A960B63D5D561B9EFE9 /* libPods-DrawerDemo.a */,
-				6F82CC9286BF751F3BCB9153 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -342,8 +235,6 @@
 				D08FD69F15E3AA86903A9879 /* Pods-NNUtils.release.xcconfig */,
 				45B15F142175906A8B33602D /* Pods-Tests.debug.xcconfig */,
 				1974E828D5C0856B724274C0 /* Pods-Tests.release.xcconfig */,
-				6B452B71D580BACEC5D70801 /* Pods-DrawerDemo.debug.xcconfig */,
-				297C316EF3E7C1EA387459D6 /* Pods-DrawerDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -351,25 +242,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4DD78FCD1B82EF87005D5797 /* DrawerDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DD78FF21B82EF87005D5797 /* Build configuration list for PBXNativeTarget "DrawerDemo" */;
-			buildPhases = (
-				896842F04B9A5957F637E42C /* Check Pods Manifest.lock */,
-				4DD78FCA1B82EF87005D5797 /* Sources */,
-				4DD78FCB1B82EF87005D5797 /* Frameworks */,
-				4DD78FCC1B82EF87005D5797 /* Resources */,
-				611ABCF26071400602D38856 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DrawerDemo;
-			productName = DrawerDemo;
-			productReference = 4DD78FCE1B82EF87005D5797 /* DrawerDemo.app */;
-			productType = "com.apple.product-type.application";
-		};
 		6003F589195388D20070C39A /* NNUtils */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "NNUtils" */;
@@ -419,9 +291,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "koichi yamamoto";
 				TargetAttributes = {
-					4DD78FCD1B82EF87005D5797 = {
-						CreatedOnToolsVersion = 6.4;
-					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -442,22 +311,11 @@
 			targets = (
 				6003F589195388D20070C39A /* NNUtils */,
 				6003F5AD195388D20070C39A /* Tests */,
-				4DD78FCD1B82EF87005D5797 /* DrawerDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4DD78FCC1B82EF87005D5797 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DD78FDC1B82EF87005D5797 /* Main.storyboard in Resources */,
-				4DD78FE11B82EF87005D5797 /* LaunchScreen.xib in Resources */,
-				4DD78FDE1B82EF87005D5797 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -482,21 +340,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		611ABCF26071400602D38856 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrawerDemo/Pods-DrawerDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7D4003B3D75EAA530F05528B /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,21 +368,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		896842F04B9A5957F637E42C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8D74A42BF21D1AC845E0D539 /* Check Pods Manifest.lock */ = {
@@ -575,19 +403,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4DD78FCA1B82EF87005D5797 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DD78FD91B82EF87005D5797 /* ViewController.m in Sources */,
-				4DD78FD61B82EF87005D5797 /* AppDelegate.m in Sources */,
-				4DD78FD31B82EF87005D5797 /* main.m in Sources */,
-				4DD78FFD1B82F044005D5797 /* DrawerVC.m in Sources */,
-				4DD78FFB1B82F044005D5797 /* DrawerContainerVC.m in Sources */,
-				4DD790001B82F304005D5797 /* SettingsVC.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6003F586195388D20070C39A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,7 +411,6 @@
 				4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */,
 				4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */,
 				6003F59E195388D20070C39A /* NNAppDelegate.m in Sources */,
-				4DD78F6F1B82D9EF005D5797 /* UIViewControllerDemoVC.m in Sources */,
 				4D163DE91B7349C2007184D2 /* UIViewGlowDemoVC.m in Sources */,
 				4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */,
 				4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */,
@@ -624,22 +438,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4DD78FDA1B82EF87005D5797 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DD78FDB1B82EF87005D5797 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4DD78FDF1B82EF87005D5797 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DD78FE01B82EF87005D5797 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		6003F596195388D20070C39A /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -667,47 +465,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4DD78FEE1B82EF87005D5797 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B452B71D580BACEC5D70801 /* Pods-DrawerDemo.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DrawerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		4DD78FEF1B82EF87005D5797 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 297C316EF3E7C1EA387459D6 /* Pods-DrawerDemo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = DrawerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
 		6003F5BD195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -853,15 +610,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4DD78FF21B82EF87005D5797 /* Build configuration list for PBXNativeTarget "DrawerDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DD78FEE1B82EF87005D5797 /* Debug */,
-				4DD78FEF1B82EF87005D5797 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6003F585195388D10070C39A /* Build configuration list for PBXProject "NNUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

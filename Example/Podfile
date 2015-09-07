@@ -11,13 +11,6 @@ target 'NNUtils', :exclusive => true do
 end
 
 
-target 'DrawerDemo', :exclusive => true do
-	pod "NNUtils", :path => "../"
-	pod "FrameAccessor"
-	pod "NBULog"
-	pod "NNNotificationController"
-end
-
 
 target 'Tests', :exclusive => true do
   pod "NNUtils", :path => "../"

@@ -1,43 +1,36 @@
 //
-//  NNUtilsTests.m
-//  NNUtilsTests
+//  HogeTests.m
+//  HogeTests
 //
-//  Created by koichi yamamoto on 03/11/2015.
-//  Copyright (c) 2014 koichi yamamoto. All rights reserved.
+//  Created by Koichi Yamamoto on 09/08/2015.
+//  Copyright (c) 2015 Koichi Yamamoto. All rights reserved.
 //
 
-SpecBegin(InitialSpecs)
+@import XCTest;
+#import <NSString+NNUtils.h>
 
-describe(@"these will fail", ^{
 
-    it(@"can do maths", ^{
-        expect(1).to.equal(2);
-    });
+@interface Tests : XCTestCase
+@end
 
-    it(@"can read", ^{
-        expect(@"number").to.equal(@"string");
-    });
-    
-    it(@"will wait and fail", ^AsyncBlock {
-        
-    });
-});
 
-describe(@"these will pass", ^{
-    
-    it(@"can do maths", ^{
-        expect(1).beLessThan(23);
-    });
-    
-    it(@"can read", ^{
-        expect(@"team").toNot.contain(@"I");
-    });
-    
-    it(@"will wait and succeed", ^AsyncBlock {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-            done();
-        });
-    });
-});
+@implementation Tests
 
-SpecEnd
+- (void)setUp{
+	[super setUp];
+	// Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)tearDown{
+	// Put teardown code here. This method is called after the invocation of each test method in the class.
+	[super tearDown];
+}
+
+- (void)testExample{
+	NSString *string = @"http://qiita.com/ と http://www.google.com";
+	NSArray *urls = [string extractURLs];
+	NSLog(@"%@", urls);
+}
+
+@end
+

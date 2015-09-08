@@ -10,6 +10,9 @@
 
 @interface NSString (NNUtils)
 
+/// 文字列からNSURLの配列を抽出
+- (NSArray*)extractURLs;
+
 /// iOS7以前用のcontainsString;
 -(BOOL)containsStringForiOS7:(NSString *)aString;
 

@@ -11,6 +11,29 @@
 @implementation NSString (NNUtils)
 
 
+/// 文字列からNSURLの配列を抽出
+- (NSArray*)extractURLs{
+	// 文字列抽出用の正規表現オブジェクトを生成する
+	NSError *error = nil;
+	NSString *URLPattern = @"(http://|https://){1}[\\w\\.\\-/:]+";
+	NSRegularExpression *regularExpressionForPickOut = [NSRegularExpression regularExpressionWithPattern:URLPattern options:0 error:&error];
+	
+	// 検索対象の文字列の中から正規表現にマッチした件数分の結果を取得
+	NSArray *matchesInString = [regularExpressionForPickOut matchesInString:self options:0 range:NSMakeRange(0, self.length)];
+	
+	// 検索結果を配列に入れる
+	NSMutableArray *urls = [NSMutableArray array];
+	for (int i=0 ; i<matchesInString.count ; i++) {
+		NSTextCheckingResult *checkingResult = matchesInString[i];
+		NSString *expressionPattern = [self substringWithRange:[checkingResult rangeAtIndex:0]];
+		NSURL* url = [NSURL URLWithString:expressionPattern];
+		[urls addObject:url];
+	}
+	return urls;
+}
+
+
+
 /// iOS7以前用のcontainsString
 -(BOOL)containsStringForiOS7:(NSString *)aString{
 	if ([self rangeOfString:aString].location != NSNotFound) {

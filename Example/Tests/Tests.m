@@ -27,13 +27,16 @@
 }
 
 - (void)testExample{
-	NSString *string = @"http://qiita.com/ と http://www.google.com";
-	NSArray *urls = [string extractURLs];
-	NSLog(@"%@", urls);
-	
-	string = @"	ほしい物リスト	リンク: http://www.amazon.co.jp/registry/wishlist/3IZP0QCF8QX3H";
-	urls = [string extractURLs];
-	NSLog(@"%@", urls);
+	NSArray* strs = @[
+					  @"http://qiita.com/ と http://www.google.com",
+					  @"aaa http://www.amazon.co.jp/registry/wishlist/3IZP0QCF8QX3H aaa",
+					  @"b https://www.amazon.co.jp/gp/aw/ls/ref=?ie=UTF8&*Version*=1&*entries*=0&ty=wishlist fuag",
+					  @"_https://www.amazon.co.jp/gp/aw/ls/ref=aw_wl_lol_wl?ie=UTF8&lid=3IZP0QCF8QX3H hoge",
+					  ];
+	for (NSString* str in strs) {
+		NSArray *urls = [str extractURLs];
+		NSLog(@"%@", urls);
+	}
 }
 
 @end

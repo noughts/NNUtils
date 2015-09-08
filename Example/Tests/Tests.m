@@ -30,6 +30,10 @@
 	NSString *string = @"http://qiita.com/ と http://www.google.com";
 	NSArray *urls = [string extractURLs];
 	NSLog(@"%@", urls);
+	
+	string = @"	ほしい物リスト	リンク: http://www.amazon.co.jp/registry/wishlist/3IZP0QCF8QX3H";
+	urls = [string extractURLs];
+	NSLog(@"%@", urls);
 }
 
 @end

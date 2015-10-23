@@ -41,7 +41,7 @@ static NSOperationQueue* _imageProcessing_queue;
 -(CGFloat)faceScore{
 	CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];
 	CIImage *ciImage = [[CIImage alloc] initWithCGImage:self.CGImage];
-	NSArray<CIFeature*>* array = [detector featuresInImage:ciImage options:@{CIDetectorImageOrientation:@(1)}];
+	NSArray<CIFeature*>* array = [detector featuresInImage:ciImage options:nil];
 	
 	NSUInteger areaSum = 0;
 	for (CIFaceFeature* feature in array) {

@@ -39,7 +39,7 @@ static NSOperationQueue* _imageProcessing_queue;
 
 /// 顔認識をして0〜1のスコアを算出
 -(CGFloat)faceScore{
-	CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];
+	CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];/// 使いまわしても速くなりませんでした
 	CIImage *ciImage = [[CIImage alloc] initWithCGImage:self.CGImage];
 	NSArray<CIFeature*>* array = [detector featuresInImage:ciImage options:nil];
 	

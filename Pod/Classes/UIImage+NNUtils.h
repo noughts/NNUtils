@@ -10,6 +10,12 @@
 
 @interface UIImage (NNUtils)
 
+/// 顔認識をして0〜1のスコアを算出
+-(void)calculateFaceScoreInBackground:(void (^)(CGFloat score))completion;
+
+/// 顔認識をして0〜100のスコアを算出
+-(CGFloat)faceScore;
+
 /// UIImagePNGRepresentation を使わずに PNG の UIImage を保存する
 -(NSURL*)savePNGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;
 -(NSURL*)savePNGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata;

@@ -11,6 +11,7 @@
 #import <NNProfiler.h>
 @import MobileCoreServices;
 @import ImageIO;
+#import <NBULog.h>
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -20,8 +21,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
-    [self testEncode];
+//    [self testEncode];
+	[self faceScoreTest];
 }
+
+
+
+-(void)faceScoreTest{
+	UIImage* img = [UIImage imageNamed:@"syugo.jpg"];
+	[NNProfiler start:@"faceScore"];
+	[img calculateFaceScoreInBackground:^(CGFloat score) {
+		[NNProfiler end];
+		NBULogInfo(@"%@", @(score));
+	}];
+	
+	
+}
+
 
 
 -(void)resizeBenchmark{

@@ -8,11 +8,61 @@
 #import "UIImage+NNUtils.h"
 #import "UIImageEffects.h"
 #import "NNProfiler.h"
-
+#import "NBULogStub.h"
 
 @implementation UIImage (NNUtils)
 
 static NSOperationQueue* _imageProcessing_queue;
+
+
+
++(NSOperationQueue*)imageProcessingQueue{
+	if( !_imageProcessing_queue ){
+		_imageProcessing_queue = [[NSOperationQueue alloc] init];
+		_imageProcessing_queue.maxConcurrentOperationCount = 1;
+	}
+	return _imageProcessing_queue;
+}
+
+
+
+/// 顔認識をして0〜1のスコアを算出
+-(void)calculateFaceScoreInBackground:(void (^)(CGFloat score))completion{
+	[[UIImage imageProcessingQueue] addOperationWithBlock:^{
+		CGFloat score = [self faceScore];
+		[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+			completion( score );
+		}];
+	}];
+}
+
+
+/// 顔認識をして0〜1のスコアを算出
+-(CGFloat)faceScore{
+	CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy:CIDetectorAccuracyLow}];
+	CIImage *ciImage = [[CIImage alloc] initWithCGImage:self.CGImage];
+	NSArray<CIFeature*>* array = [detector featuresInImage:ciImage options:@{CIDetectorImageOrientation:@(1)}];
+	
+	NSUInteger areaSum = 0;
+	for (CIFaceFeature* feature in array) {
+		NSUInteger area = feature.bounds.size.width * feature.bounds.size.height;
+		if( feature.hasSmile ){
+			area *= 2;
+		}
+		areaSum += area;
+	}
+	
+	NSUInteger imageArea = self.size.width * self.size.height;
+	CGFloat result = areaSum / (CGFloat)imageArea;
+	if( result > 1 ){
+		result = 1;
+	}
+	return result;
+}
+
+
+
+
 
 
 #pragma mark - 保存系
@@ -151,15 +201,6 @@ static NSOperationQueue* _imageProcessing_queue;
 
 
 
-
-
-+(NSOperationQueue*)imageProcessingQueue{
-	if( !_imageProcessing_queue ){
-		_imageProcessing_queue = [[NSOperationQueue alloc] init];
-		_imageProcessing_queue.maxConcurrentOperationCount = 1;
-	}
-	return _imageProcessing_queue;
-}
 
 
 

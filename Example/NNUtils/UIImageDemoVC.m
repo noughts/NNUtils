@@ -33,8 +33,17 @@
 	[img calculateFaceScoreInBackground:^(CGFloat score) {
 		[NNProfiler end];
 		NBULogInfo(@"%@", @(score));
+		
+		UIImage* img2 = [UIImage imageNamed:@"syugo_thumb.jpeg"];
+		[NNProfiler start:@"faceScore_thumb"];
+		[img2 calculateFaceScoreInBackground:^(CGFloat score) {
+			[NNProfiler end];
+			NBULogInfo(@"%@", @(score));
+		}];
 	}];
 	
+	
+
 	
 }
 

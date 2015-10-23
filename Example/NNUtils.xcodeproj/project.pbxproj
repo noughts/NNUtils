@@ -11,6 +11,7 @@
 		4D3BFDD71B7592D900EE22FA /* IMGP2838.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */; };
 		4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D40DDD11AB17172006C07D3 /* cheetah1136.png */; };
 		4D50730A1BDA29AB005F244B /* syugo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5073091BDA29AB005F244B /* syugo.jpg */; settings = {ASSET_TAGS = (); }; };
+		4D50730D1BDA2F5F005F244B /* syugo_thumb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */; settings = {ASSET_TAGS = (); }; };
 		4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */; };
 		4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */; };
 		4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */; };
@@ -55,6 +56,7 @@
 		4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMGP2838.JPG; sourceTree = "<group>"; };
 		4D40DDD11AB17172006C07D3 /* cheetah1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheetah1136.png; sourceTree = "<group>"; };
 		4D5073091BDA29AB005F244B /* syugo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = syugo.jpg; sourceTree = "<group>"; };
+		4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = syugo_thumb.jpeg; sourceTree = "<group>"; };
 		4D54F4A21B3D257F006ABA9C /* NNSpriteDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNSpriteDemoVC.h; sourceTree = "<group>"; };
 		4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNSpriteDemoVC.m; sourceTree = "<group>"; };
 		4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				4D54F4A81B3D2C9E006ABA9C /* .demoVC */,
 				4D40DDD11AB17172006C07D3 /* cheetah1136.png */,
+				4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */,
 				4D5073091BDA29AB005F244B /* syugo.jpg */,
 				4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -320,6 +323,7 @@
 			files = (
 				4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				4D50730D1BDA2F5F005F244B /* syugo_thumb.jpeg in Resources */,
 				4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */,
 				4D3BFDD71B7592D900EE22FA /* IMGP2838.JPG in Resources */,
 				4D50730A1BDA29AB005F244B /* syugo.jpg in Resources */,

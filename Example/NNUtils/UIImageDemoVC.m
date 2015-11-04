@@ -22,8 +22,28 @@
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
 //    [self testEncode];
-	[self faceScoreTest];
+//	[self faceScoreTest];
+    [self testSaveThumbnailData];
 }
+
+
+
+-(void)testSaveThumbnailData{
+    UIImage* img = [UIImage imageNamed:@"syugo.jpg"];
+    img = [img resizeWithLongSideLength:8];
+//    img = [img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1];
+    _iv.image = img;
+    NBULogInfo(@"%@", img);
+    
+    NSData* jpg = UIImageJPEGRepresentation(img, 0.1);
+    NSData* png = UIImagePNGRepresentation(img);
+    
+    NBULogInfo(@"%@", @(jpg.length));
+    NBULogInfo(@"%@", @(png.length));
+}
+
+
+
 
 
 

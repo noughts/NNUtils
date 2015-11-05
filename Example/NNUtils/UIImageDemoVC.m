@@ -44,16 +44,15 @@
     NBULogInfo(@"jpeg %@", @(jpg.length));
     NBULogInfo(@"png %@", @(png.length));
     
-    NSData* webp = [UIImage imageToWebP:img quality:80];
+    NSData* webp = [UIImage imageToWebP:img quality:90];
     NSString* webp_str = [webp base64EncodedStringWithOptions:0];
-    NBULogInfo(@"webp %@", @(webp_str.length));
+    NBULogInfo(@"webp %@ => %@", @(webp.length), @(webp_str.length));
     
     UIImage* webp_img = [UIImage imageWithWebPData:webp];
     webp_img = [webp_img normalizedImage];
-     webp_img = [webp_img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1];
+     webp_img = [webp_img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1.2];
     _iv.image = webp_img;
 }
-
 
 
 

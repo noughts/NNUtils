@@ -12,6 +12,7 @@
 @import MobileCoreServices;
 @import ImageIO;
 #import <NBULog.h>
+#import <UIImage+WebP.h>
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -29,19 +30,31 @@
 
 
 -(void)testSaveThumbnailData{
-    UIImage* img = [UIImage imageNamed:@"syugo.jpg"];
-    img = [img resizeWithLongSideLength:8];
-//    img = [img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1];
-    _iv.image = img;
-    NBULogInfo(@"%@", img);
+    UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
+    img = [img resizeWithLongSideLength:16];
+//    NBULogInfo(@"%@", img);
     
-    NSData* jpg = UIImageJPEGRepresentation(img, 0.1);
-    NSData* png = UIImagePNGRepresentation(img);
+//    NSData* jpg = UIImageJPEGRepresentation(img, 0);
+//    NSData* png = UIImagePNGRepresentation(img);
     
-    NBULogInfo(@"%@", @(jpg.length));
-    NBULogInfo(@"%@", @(png.length));
-}
 
+    
+//    NBULogInfo(@"jpeg %@", @(jpg.length));
+//    NBULogInfo(@"png %@", @(png.length));
+    
+    [NNProfiler start:@"endode to webp"];
+    NSData* webp = [UIImage imageToWebP:img quality:90];
+    [NNProfiler end];
+    NSString* webp_str = [webp base64EncodedStringWithOptions:0];
+    NBULogInfo(@"webp %@ => %@", @(webp.length), @(webp_str.length));
+    
+    [NNProfiler start:@"decode from webp"];
+    UIImage* webp_img = [UIImage imageWithWebPData:webp];
+    [NNProfiler end];
+    webp_img = [webp_img normalizedImage];/// ブラーのために必要
+     webp_img = [webp_img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1.2];
+    _iv.image = webp_img;
+}
 
 
 

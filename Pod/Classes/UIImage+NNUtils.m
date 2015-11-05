@@ -224,13 +224,22 @@ static NSOperationQueue* _imageProcessing_queue;
 	if (self.imageOrientation == UIImageOrientationUp)
 		return self;
 	
-	CGSize size = self.size;
-	UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
-	[self drawInRect:(CGRect){{0, 0}, size}];
-	UIImage* normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	
-	return normalizedImage;
+    return [self normalizedImage];
+}
+
+
+/// 画像をノーマライズ
+/// 以下の時に便利です。
+/// - UIImage#imageWithContentsOfFile: や UIImage#imageWithData: などで作成したUIImageはレンダリングが遅いのを回避 http://blog.syuhari.jp/archives/1694
+/// webp画像にぼかしをかけるときに、vImageでエラーが出るので、その前処理として。
+-(UIImage*)normalizedImage{
+    CGSize size = self.size;
+    UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+    [self drawInRect:(CGRect){{0, 0}, size}];
+    UIImage* normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return normalizedImage;
 }
 
 

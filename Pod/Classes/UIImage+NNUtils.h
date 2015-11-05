@@ -10,6 +10,9 @@
 
 @interface UIImage (NNUtils)
 
+/// 画像をノーマライズ
+-(UIImage*)normalizedImage;
+
 /// 顔認識をして0〜1のスコアを算出
 -(void)calculateFaceScoreInBackground:(void (^)(CGFloat score))completion;
 

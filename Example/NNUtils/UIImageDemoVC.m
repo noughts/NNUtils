@@ -48,6 +48,8 @@
     NSString* webp_str = [webp base64EncodedStringWithOptions:0];
     NBULogInfo(@"webp %@ => %@", @(webp.length), @(webp_str.length));
     
+    
+    webp = [[NSData alloc] initWithBase64EncodedString:webp_str options:0];
     [NNProfiler start:@"decode from webp"];
     UIImage* webp_img = [UIImage imageWithWebPData:webp];
     [NNProfiler end];

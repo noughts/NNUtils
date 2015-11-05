@@ -12,6 +12,7 @@
 @import MobileCoreServices;
 @import ImageIO;
 #import <NBULog.h>
+#import <UIImage+WebP.h>
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -32,14 +33,23 @@
     UIImage* img = [UIImage imageNamed:@"syugo.jpg"];
     img = [img resizeWithLongSideLength:8];
 //    img = [img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1];
-    _iv.image = img;
+//    _iv.image = img;
     NBULogInfo(@"%@", img);
     
     NSData* jpg = UIImageJPEGRepresentation(img, 0.1);
     NSData* png = UIImagePNGRepresentation(img);
     
-    NBULogInfo(@"%@", @(jpg.length));
-    NBULogInfo(@"%@", @(png.length));
+
+    
+    NBULogInfo(@"jpeg %@", @(jpg.length));
+    NBULogInfo(@"png %@", @(png.length));
+    
+    NSData* webp = [UIImage imageToWebP:img quality:1];
+    NBULogInfo(@"webp %@", @(webp.length));
+    
+    UIImage* webp_img = [UIImage imageWithWebPData:webp];
+     webp_img = [webp_img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1];
+    _iv.image = webp_img;
 }
 
 

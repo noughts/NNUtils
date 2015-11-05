@@ -8,6 +8,7 @@ target 'NNUtils', :exclusive => true do
   pod "NNUtils", :path => "../"
   pod "FrameAccessor"
   pod "NBULog"
+  pod 'iOS-WebP'
 end
 
 

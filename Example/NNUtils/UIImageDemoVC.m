@@ -32,30 +32,21 @@
 -(void)testSaveThumbnailData{
     UIImage* img = [UIImage imageNamed:@"cheetah1136.png"];
     img = [img resizeWithLongSideLength:16];
-//    NBULogInfo(@"%@", img);
+    NBULogInfo(@"%@", img);
     
-//    NSData* jpg = UIImageJPEGRepresentation(img, 0);
-//    NSData* png = UIImagePNGRepresentation(img);
+    NSData* jpg = UIImageJPEGRepresentation(img, 0);
+    NSData* png = UIImagePNGRepresentation(img);
     
 
+    NSString* png_str = [png base64EncodedStringWithOptions:0];
     
-//    NBULogInfo(@"jpeg %@", @(jpg.length));
-//    NBULogInfo(@"png %@", @(png.length));
-    
-    [NNProfiler start:@"endode to webp"];
-    NSData* webp = [UIImage imageToWebP:img quality:90];
-    [NNProfiler end];
-    NSString* webp_str = [webp base64EncodedStringWithOptions:0];
-    NBULogInfo(@"webp %@ => %@", @(webp.length), @(webp_str.length));
+    NBULogInfo(@"jpeg %@", @(jpg.length));
+    NBULogInfo(@"png %@ => %@", @(png.length), @(png_str.length));
     
     
-    webp = [[NSData alloc] initWithBase64EncodedString:webp_str options:0];
-    [NNProfiler start:@"decode from webp"];
-    UIImage* webp_img = [UIImage imageWithWebPData:webp];
-    [NNProfiler end];
-    webp_img = [webp_img normalizedImage];/// ブラーのために必要
-     webp_img = [webp_img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1.2];
-    _iv.image = webp_img;
+    img = [img imageByApplyingBlurWithRadius:1 optimized:NO tintColor:nil saturationDeltaFactor:1.2];
+
+    _iv.image = img;
 }
 
 

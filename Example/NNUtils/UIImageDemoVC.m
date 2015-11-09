@@ -23,7 +23,7 @@
     [super viewDidLoad];
 	
 	NBULogInfo(@"is3by4 = %@", @([UIScreen mainScreen].is3by4));
-	
+	NBULogInfo(@"%@", @([UIScreen mainScreen].pixelWidth));
 	
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];

@@ -10,6 +10,12 @@
 
 @interface UIScreen (NNUtils)
 
+/// 幅をピクセル数で。
+-(NSUInteger)pixelWidth;
+
+/// 高さをピクセル数で。
+-(NSUInteger)pixelHeight;
+
 /// 3:4画面か
 -(BOOL)is3by4;
 

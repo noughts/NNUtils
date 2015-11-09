@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "NNUtils"
-  s.version          = "1.25.0"
+  s.version          = "1.26.0"
   s.summary          = "hoge"
   s.description      = <<-DESC
                        fuga

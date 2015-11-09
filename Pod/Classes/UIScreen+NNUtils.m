@@ -23,6 +23,18 @@
 }
 
 
+/// 幅をピクセル数で。
+-(NSUInteger)pixelWidth{
+	return self.bounds.size.width * self.scale;
+}
+
+/// 高さをピクセル数で。
+-(NSUInteger)pixelHeight{
+	return self.bounds.size.height * self.scale;
+}
+
+
+
 -(NSUInteger)screenHeight{
 	if( [self respondsToSelector:@selector(nativeBounds)] ){
 		return self.nativeBounds.size.height / self.nativeScale;

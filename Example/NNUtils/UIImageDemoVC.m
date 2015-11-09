@@ -13,6 +13,7 @@
 @import ImageIO;
 #import <NBULog.h>
 #import <UIImage+WebP.h>
+#import <UIScreen+NNUtils.h>
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -20,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	NBULogInfo(@"is3by4 = %@", @([UIScreen mainScreen].is3by4));
+	
+	
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
 //    [self testEncode];

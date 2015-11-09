@@ -41,12 +41,12 @@ PODS:
   - NNProfiler (1.1.1):
     - NBULogStub
   - NNSprite (0.5.1)
-  - NNUtils (1.23.1):
+  - NNUtils (1.24.0):
     - AMPopTip
     - NNProfiler
     - NNSprite
     - NSDate-Escort
-  - NSDate-Escort (1.5.2)
+  - NSDate-Escort (1.5.3)
 
 DEPENDENCIES:
   - FrameAccessor
@@ -68,7 +68,7 @@ SPEC CHECKSUMS:
   NBULogStub: 398fa3535e3b368d6f1cb3b32c2ac0cb81cf350c
   NNProfiler: e2abbda27cd623b19848fa21d3c4e24732c9b648
   NNSprite: 5afb965714210a812394b76b20e94fb902d14db3
-  NNUtils: dd4bf18d56aeb4e024d6cb0cb5df758402cd09fa
-  NSDate-Escort: 7ec4191ec9ef37f1303b556f9a755a433f8197fd
+  NNUtils: 4c4de10a0ee46ae418451c06ea5b7f57c429b7aa
+  NSDate-Escort: a01b1298d1ef3a79f6c205ef63a9781c41c8ee78
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

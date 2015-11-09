@@ -26,6 +26,7 @@ def getVersion():
 	result_str = commands.getoutput("pod ipc spec %s.podspec" % projectName)
 	# print result_str;
 	dict = json.loads( result_str );
+	# print dict;
 	return dict["version"];
 
 

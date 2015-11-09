@@ -23,8 +23,8 @@
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
 //    [self testEncode];
-//	[self faceScoreTest];
-    [self testSaveThumbnailData];
+	[self faceScoreTest];
+//    [self testSaveThumbnailData];
 }
 
 
@@ -54,7 +54,7 @@
 
 
 -(void)faceScoreTest{
-	UIImage* img = [UIImage imageNamed:@"syugo.jpg"];
+	UIImage* img = [UIImage imageNamed:@"IMG_3315.JPG"];
 	[NNProfiler start:@"faceScore"];
 	[img calculateFaceScoreInBackground:^(CGFloat score) {
 		[NNProfiler end];

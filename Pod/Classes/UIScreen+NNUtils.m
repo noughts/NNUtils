@@ -13,7 +13,7 @@
 
 /// 3:4画面か
 -(BOOL)is3by4{
-	return [self screenHeight] / [self screenWidth] == 1.5;
+	return (float)[self screenHeight] / [self screenWidth] == 1.5;
 }
 
 

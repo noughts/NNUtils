@@ -14,6 +14,7 @@
 #import <NBULog.h>
 #import <UIImage+WebP.h>
 #import <UIScreen+NNUtils.h>
+#import <NSDictionary+NNUtils.h>
 
 @implementation UIImageDemoVC{
 	__weak IBOutlet UIImageView* _iv;
@@ -25,10 +26,20 @@
 	NBULogInfo(@"is3by4 = %@", @([UIScreen mainScreen].is3by4));
 	NBULogInfo(@"%@", @([UIScreen mainScreen].pixelWidth));
 	
+	NSDictionary* dic = @{
+						  @"hoge": @"fuga",
+						  @"hh": @"aa"
+						  };
+	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge",@"hh"]]) );
+	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge",@"aaa"]]) );
+	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge",@"hh", @"aa"]]) );
+	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge"]]) );
+	
+	
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];
 //    [self testEncode];
-	[self faceScoreTest];
+//	[self faceScoreTest];
 //    [self testSaveThumbnailData];
 }
 

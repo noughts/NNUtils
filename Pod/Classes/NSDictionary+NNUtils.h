@@ -13,4 +13,7 @@
 /// 指定したキーのみを含むか？
 -(BOOL)isOnlyContainsKeys:(NSArray<NSString*>*)keys;
 
+/// 指定したキーのみを含むか？
+-(BOOL)isOnlyContainsKey:(NSString*)key;
+
 @end

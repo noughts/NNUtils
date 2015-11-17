@@ -43,6 +43,9 @@
 /// JavaScript の setTimetout
 +(void)setTimeout:(void(^)(void))block delay:(float)delay{
 	[NSTimer scheduledTimerWithTimeInterval:delay target:[NSBlockOperation blockOperationWithBlock:block] selector:@selector(main) userInfo:nil repeats:NO];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//        block();
+//    });
 }
 
 

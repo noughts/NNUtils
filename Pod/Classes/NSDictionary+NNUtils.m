@@ -24,4 +24,17 @@
 	return YES;
 }
 
+/// 指定したキーのみを含むか？
+-(BOOL)isOnlyContainsKey:(NSString*)key{
+	if( self.count != 1 ){
+		return NO;
+	}
+	
+	if( ![self valueForKey:key] ){
+		return NO;
+	}
+	return YES;
+}
+
+
 @end

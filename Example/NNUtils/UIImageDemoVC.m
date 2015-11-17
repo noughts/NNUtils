@@ -35,6 +35,10 @@
 	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge",@"hh", @"aa"]]) );
 	NSLog( @"%@", @([dic isOnlyContainsKeys:@[@"hoge"]]) );
 	
+	NSDictionary* dic2 = @{@"hoge":@"fuga"};
+	NSLog( @"%@", @([dic2 isOnlyContainsKey:@"hoge"]) );
+	NSLog( @"%@", @([dic2 isOnlyContainsKey:@"figa"]) );
+	
 	
     // Do any additional setup after loading the view.
 //	[self resizeBenchmark];

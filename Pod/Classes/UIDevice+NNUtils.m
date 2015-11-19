@@ -11,6 +11,14 @@
 @implementation UIDevice (NNUtils)
 
 
+/// iOS8以上か？
+-(BOOL)isIOS8AndAbove{
+	return NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_0;
+}
+
+
+
+
 /// 渡した文字列から製品名を削除（テストしやすいようにメソッド切り出し）
 +(NSString*)stripProductNameFromString:(NSString*)string{
 	NSMutableString* mutableString = [NSMutableString stringWithString:string];

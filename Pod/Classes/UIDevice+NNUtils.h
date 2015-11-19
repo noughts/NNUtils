@@ -10,6 +10,9 @@
 
 @interface UIDevice (NNUtils)
 
+/// iOS8以上か？
+-(BOOL)isIOS8AndAbove;
+
 /// 渡した文字列から製品名を削除（テストしやすいようにメソッド切り出し）
 +(NSString*)stripProductNameFromString:(NSString*)string;
 

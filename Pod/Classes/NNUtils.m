@@ -40,6 +40,8 @@
 
 
 
+
+
 /// JavaScript の setTimetout
 +(void)setTimeout:(void(^)(void))block delay:(float)delay{
 	[NSTimer scheduledTimerWithTimeInterval:delay target:[NSBlockOperation blockOperationWithBlock:block] selector:@selector(main) userInfo:nil repeats:NO];

@@ -10,6 +10,9 @@
 
 @interface UIDevice (NNUtils)
 
+/// Photos Framework が使えるか？
+-(BOOL)isPhotosFrameworkAvailable;
+
 /// iOS8以上か？
 -(BOOL)isIOS8AndAbove;
 

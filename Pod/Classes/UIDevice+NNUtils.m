@@ -16,6 +16,10 @@
 	return NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_0;
 }
 
+/// Photos Framework が使えるか？
+-(BOOL)isPhotosFrameworkAvailable{
+	return [self isIOS8AndAbove];
+}
 
 
 

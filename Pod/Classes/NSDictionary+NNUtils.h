@@ -10,6 +10,9 @@
 
 @interface NSDictionary (NNUtils)
 
+/// JSON-Safeなdictionaryに変換
+-(NSDictionary*)JSONSafeDictionary;
+
 /// 指定したキーのみを含むか？
 -(BOOL)isOnlyContainsKeys:(NSArray<NSString*>*)keys;
 

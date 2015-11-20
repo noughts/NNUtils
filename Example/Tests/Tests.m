@@ -8,7 +8,7 @@
 
 @import XCTest;
 #import <NSString+NNUtils.h>
-
+#import <NSDictionary+NNUtils.h>
 
 @interface Tests : XCTestCase
 @end
@@ -26,7 +26,32 @@
 	[super tearDown];
 }
 
-- (void)testExample{
+
+-(void)testJSONSafeDictionary{
+	NSDictionary* dict = @{
+						   @"hoge":@"fuga",
+						   @"url": [NSURL URLWithString:@"http://google.com"],
+						   @"nest":@{
+								   @"aaa": @"bbb",
+								   @"url": [NSURL URLWithString:@"http://google.com"],
+								   },
+						   };
+	
+	dict = [dict JSONSafeDictionary];
+	
+	@try {
+		NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:0 error:NULL];
+		NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+		NSLog( @"%@", jsonString );
+	}
+	@catch (NSException *exception) {
+		XCTAssertNil(exception);
+	}
+	@finally {
+	}
+}
+
+- (void)_testExample{
 	NSArray* strs = @[
 					  @"http://qiita.com/ と http://www.google.com",
 					  @"aaa http://www.amazon.co.jp/registry/wishlist/3IZP0QCF8QX3H aaa",

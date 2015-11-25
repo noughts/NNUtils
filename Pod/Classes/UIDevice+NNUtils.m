@@ -11,6 +11,11 @@
 @implementation UIDevice (NNUtils)
 
 
+/// シミュレーターかどうか？
+-(BOOL)isSimulator{
+	return [self.model hasSuffix:@"Simulator"];
+}
+
 /// iOS8以上か？
 -(BOOL)isIOS8AndAbove{
 	return NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_8_0;

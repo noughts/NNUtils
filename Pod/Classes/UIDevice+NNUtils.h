@@ -10,6 +10,9 @@
 
 @interface UIDevice (NNUtils)
 
+/// シミュレーターかどうか？
+-(BOOL)isSimulator;
+
 /// Photos Framework が使えるか？
 -(BOOL)isPhotosFrameworkAvailable;
 

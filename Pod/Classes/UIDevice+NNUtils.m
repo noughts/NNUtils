@@ -13,8 +13,13 @@
 
 /// シミュレーターかどうか？
 -(BOOL)isSimulator{
-	return [self.model hasSuffix:@"Simulator"];
+#if TARGET_IPHONE_SIMULATOR
+	return YES;
+#else
+	return NO;
+#endif
 }
+
 
 /// iOS8以上か？
 -(BOOL)isIOS8AndAbove{

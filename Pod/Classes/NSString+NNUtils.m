@@ -7,16 +7,14 @@
 //
 
 #import "NSString+NNUtils.h"
+#import "NSURL+NNUtils.h"
 
 @implementation NSString (NNUtils)
 
 
 /// ファイル名からDocumentsディレクトリのファイルURLを復元
 -(NSURL*)fileURL{
-    NSString* homeDir = NSHomeDirectory();
-    NSString* component = [NSString stringWithFormat:@"Documents/%@", self];
-    NSString* path = [homeDir stringByAppendingPathComponent:component];
-    return [NSURL fileURLWithPath:path];
+    return [NSURL documentFileURLFromFileName:self];
 }
 
 

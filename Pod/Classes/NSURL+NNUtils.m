@@ -12,6 +12,16 @@
 
 @implementation NSURL (NNUtils)
 
+/// ファイル名からDocumentsディレクトリのファイルURLを返す
++(NSURL*)documentFileURLFromFileName:(NSString*)fileName{
+    NSString* homeDir = NSHomeDirectory();
+    NSString* component = [NSString stringWithFormat:@"Documents/%@", fileName];
+    NSString* path = [homeDir stringByAppendingPathComponent:component];
+    return [NSURL fileURLWithPath:path];
+}
+
+
+
 /// Documentsディレクトリ内のランダムなファイルURLを作成
 +(NSURL*)randomDocumentFilePathWithExtension:(NSString*)extension{
 	NSString *uuid = [[NSUUID UUID] UUIDString];

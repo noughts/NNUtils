@@ -11,6 +11,9 @@
 
 @interface NSURL (NNUtils)
 
+/// ファイル名からDocumentsディレクトリのファイルURLを返す
++(NSURL*)documentFileURLFromFileName:(NSString*)fileName;
+
 /// Documentsディレクトリ内のランダムなファイルURLを作成
 +(NSURL*)randomDocumentFilePathWithExtension:(NSString*)extension;
 

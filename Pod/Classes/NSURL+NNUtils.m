@@ -29,6 +29,8 @@
 	return [NSURL fileURLWithPath:path];
 }
 
+
+
 -(void)dump{
 	[super dumpWithIgnorePropertyNames:@[@"previewItemTitle", @"fileSystemRepresentation"]];
 }

@@ -11,6 +11,15 @@
 @implementation NSString (NNUtils)
 
 
+/// ファイル名からDocumentsディレクトリのファイルURLを復元
+-(NSURL*)fileURL{
+    NSString* homeDir = NSHomeDirectory();
+    NSString* component = [NSString stringWithFormat:@"Documents/%@", self];
+    NSString* path = [homeDir stringByAppendingPathComponent:component];
+    return [NSURL fileURLWithPath:path];
+}
+
+
 /// 文字列からNSURLの配列を抽出
 - (NSArray*)extractURLs{
 	NSDataDetector *linkDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypeLink error:nil];

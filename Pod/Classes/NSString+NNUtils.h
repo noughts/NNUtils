@@ -10,6 +10,9 @@
 
 @interface NSString (NNUtils)
 
+/// ファイル名からDocumentsディレクトリのファイルURLを復元
+-(NSURL*)fileURL;
+
 /// 文字列からNSURLの配列を抽出
 - (NSArray*)extractURLs;
 

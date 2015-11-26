@@ -95,7 +95,7 @@ static NSOperationQueue* _imageProcessing_queue;
 
 /// UIImagePNGRepresentation を使わずに PNG の UIImage を保存する
 -(NSURL*)savePNGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
-    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"png"];
+    NSURL* url = [NSURL randomDocumentFilePathWithExtension:@"png"];
     return [self saveFileWithoutCompressWithFiletype:@"png" metadata:metadata destinationURL:url];
 }
 -(NSURL*)savePNGFileToTemporaryDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
@@ -104,7 +104,7 @@ static NSOperationQueue* _imageProcessing_queue;
 }
 /// UIImageJPEGRepresentation を使わずに JPEG の UIImage を保存する
 -(NSURL*)saveJPEGFileToDocumentDirectoryWithoutCompressWithMetadata:(NSDictionary*)metadata{
-    NSURL* url = [NSURL randomTemporaryFileURLWithExtension:@"jpg"];
+    NSURL* url = [NSURL randomDocumentFilePathWithExtension:@"jpg"];
     return [self saveFileWithoutCompressWithFiletype:@"jpg" metadata:metadata destinationURL:url];
 }
 /// UIImageJPEGRepresentation を使わずに JPEG の UIImage を保存する

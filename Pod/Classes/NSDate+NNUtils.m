@@ -16,6 +16,10 @@ static NSDateFormatter* _dateFormatter;
 
 /// 相対時刻を返す
 - (NSString *)relativeString{
+    if( !_dateFormatter ){
+        _dateFormatter = [[NSDateFormatter alloc] init];
+    }
+    
 	NSDate *now = [NSDate date];
 	NSTimeInterval passed = [now timeIntervalSinceDate:self];
 	int min = passed / 60;

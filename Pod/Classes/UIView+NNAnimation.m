@@ -51,7 +51,7 @@
 		return;
 	}
 	
-	[UIView animateWithDuration:0 delay:0 options:(7 << 16) animations:^{
+	[UIView animateWithDuration:0.25 animations:^{
 		self.alpha = 0;
 	} completion:^(BOOL finished) {
 		self.hidden = YES;

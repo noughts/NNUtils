@@ -25,6 +25,11 @@ static NSOperationQueue* _imageProcessing_queue;
 }
 
 
+/// アスペクト比を返す
+-(CGFloat)aspectRatio{
+	return self.size.width / self.size.height;
+}
+
 
 /// 顔認識をして0〜1のスコアを算出
 -(void)calculateFaceScoreInBackground:(void (^)(CGFloat score))completion{

@@ -30,6 +30,8 @@
 /// 画像をエンコードなしでNSDataに変換。mimetype => "image/jpg" | "image/png"
 -(NSData*)dataWithMimetype:(NSString *)mimetype;
 
+/// アスペクト比を返す
+-(CGFloat)aspectRatio;
 
 /// 横長画像？
 -(BOOL)isLandscape;

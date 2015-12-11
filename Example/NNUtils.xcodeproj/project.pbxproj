@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4D163DE91B7349C2007184D2 /* UIViewGlowDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D163DE81B7349C2007184D2 /* UIViewGlowDemoVC.m */; };
-		4D1F6AF51BECBCD3000964EB /* IMG_3315.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D1F6AF41BECBCD3000964EB /* IMG_3315.JPG */; settings = {ASSET_TAGS = (); }; };
+		4D1F6AF51BECBCD3000964EB /* IMG_3315.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D1F6AF41BECBCD3000964EB /* IMG_3315.JPG */; };
 		4D3BFDD71B7592D900EE22FA /* IMGP2838.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */; };
 		4D40DDD21AB17172006C07D3 /* cheetah1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D40DDD11AB17172006C07D3 /* cheetah1136.png */; };
-		4D50730A1BDA29AB005F244B /* syugo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5073091BDA29AB005F244B /* syugo.jpg */; settings = {ASSET_TAGS = (); }; };
-		4D50730D1BDA2F5F005F244B /* syugo_thumb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */; settings = {ASSET_TAGS = (); }; };
+		4D50730A1BDA29AB005F244B /* syugo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D5073091BDA29AB005F244B /* syugo.jpg */; };
+		4D50730D1BDA2F5F005F244B /* syugo_thumb.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */; };
 		4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D54F4A31B3D257F006ABA9C /* NNSpriteDemoVC.m */; };
 		4D6CE6A51ABBC6A90003C8E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */; };
 		4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A7BE11B4640F80050AFFC /* UIViewBlurDemoVC.m */; };
 		4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */; };
 		4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */; };
+		4DF1C3D01C1A91A6004E2755 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C3CF1C1A91A6004E2755 /* ViewController.m */; };
 		4DFC13CF1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */; };
 		4DFC13D51AFA04B300ECEE32 /* NavigationControllerDemo2VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC13D41AFA04B300ECEE32 /* NavigationControllerDemo2VC.m */; };
 		572F9D9398FFCB86EF5C8736 /* libPods-NNUtils.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0498160B9F88FC0047719BDF /* libPods-NNUtils.a */; };
@@ -68,6 +69,8 @@
 		4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopTipVC.m; sourceTree = "<group>"; };
 		4DA7AFD81ADBB65800AC0E63 /* UIImageDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageDemoVC.h; sourceTree = "<group>"; };
 		4DA7AFD91ADBB65800AC0E63 /* UIImageDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageDemoVC.m; sourceTree = "<group>"; };
+		4DF1C3CE1C1A91A6004E2755 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4DF1C3CF1C1A91A6004E2755 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4DFC13CD1AF9FFED00ECEE32 /* NavigationControllerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemoVC.h; sourceTree = "<group>"; };
 		4DFC13CE1AF9FFED00ECEE32 /* NavigationControllerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDemoVC.m; sourceTree = "<group>"; };
 		4DFC13D31AFA04B300ECEE32 /* NavigationControllerDemo2VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDemo2VC.h; sourceTree = "<group>"; };
@@ -142,6 +145,18 @@
 			name = .demoVC;
 			sourceTree = "<group>";
 		};
+		4DF1C3D11C1A91E0004E2755 /* .images */ = {
+			isa = PBXGroup;
+			children = (
+				4D40DDD11AB17172006C07D3 /* cheetah1136.png */,
+				4D1F6AF41BECBCD3000964EB /* IMG_3315.JPG */,
+				4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */,
+				4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */,
+				4D5073091BDA29AB005F244B /* syugo.jpg */,
+			);
+			name = .images;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -179,12 +194,8 @@
 		6003F593195388D20070C39A /* NNUtils */ = {
 			isa = PBXGroup;
 			children = (
+				4DF1C3D11C1A91E0004E2755 /* .images */,
 				4D54F4A81B3D2C9E006ABA9C /* .demoVC */,
-				4D40DDD11AB17172006C07D3 /* cheetah1136.png */,
-				4D50730C1BDA2F5F005F244B /* syugo_thumb.jpeg */,
-				4D5073091BDA29AB005F244B /* syugo.jpg */,
-				4D1F6AF41BECBCD3000964EB /* IMG_3315.JPG */,
-				4D3BFDD61B7592D900EE22FA /* IMGP2838.JPG */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				4D6CE6A41ABBC6A90003C8E2 /* LaunchScreen.xib */,
 				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
@@ -193,6 +204,8 @@
 				4DA7AFD51ADBB54700AC0E63 /* PopTipVC.h */,
 				4DA7AFD61ADBB54700AC0E63 /* PopTipVC.m */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				4DF1C3CE1C1A91A6004E2755 /* ViewController.h */,
+				4DF1C3CF1C1A91A6004E2755 /* ViewController.m */,
 			);
 			path = NNUtils;
 			sourceTree = "<group>";
@@ -418,6 +431,7 @@
 				4D8A7BE21B4640F80050AFFC /* UIViewBlurDemoVC.m in Sources */,
 				4D54F4A41B3D257F006ABA9C /* NNSpriteDemoVC.m in Sources */,
 				6003F59E195388D20070C39A /* NNAppDelegate.m in Sources */,
+				4DF1C3D01C1A91A6004E2755 /* ViewController.m in Sources */,
 				4D163DE91B7349C2007184D2 /* UIViewGlowDemoVC.m in Sources */,
 				4DA7AFDA1ADBB65800AC0E63 /* UIImageDemoVC.m in Sources */,
 				4DA7AFD71ADBB54700AC0E63 /* PopTipVC.m in Sources */,

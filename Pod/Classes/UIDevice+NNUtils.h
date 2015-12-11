@@ -10,6 +10,10 @@
 
 @interface UIDevice (NNUtils)
 
+/// カメラロール内の自分で撮影した写真枚数を取得
+/// カメラロール内の写真枚数をチェックしてUserDefaultsに保存
+-(void)fetchCameraRollAssetsCountInBackground:(void (^)(NSUInteger count, NSError* error))block;
+
 /// シミュレーターかどうか？
 -(BOOL)isSimulator;
 

@@ -30,6 +30,12 @@
 	[[UIDevice currentDevice] fetchCameraRollAssetsCountInBackground:^(NSUInteger count, NSError *error) {
 		NBULogInfo(@"%@ %@", @(count), error);
 	}];
+	
+	/*
+	 NSError* error;
+	 NSUInteger count = [[UIDevice currentDevice] fetchCameraRollAssetsCount:&error];
+	 NBULogInfo(@"%@ %@", @(count), error);
+	 */
 }
 
 

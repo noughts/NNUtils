@@ -698,7 +698,20 @@
                     <view key="view" contentMode="scaleToFill" id="muS-Gn-8Ld">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fiz-2v-Cx2">
+                                <rect key="frame" x="137" y="310" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="hoge:" destination="eYt-43-S33" eventType="touchUpInside" id="mBH-du-yZW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fiz-2v-Cx2" firstAttribute="centerY" secondItem="muS-Gn-8Ld" secondAttribute="centerY" id="BuJ-Vb-5Ly"/>
+                            <constraint firstItem="Fiz-2v-Cx2" firstAttribute="centerX" secondItem="muS-Gn-8Ld" secondAttribute="centerX" id="g1n-KM-B0c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FGN-0v-Far"/>
                 </viewController>

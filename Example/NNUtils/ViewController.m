@@ -7,13 +7,29 @@
 //
 
 #import "ViewController.h"
-
+#import <UIDevice+NNUtils.h>
+#import <NBULog.h>
+@import Photos;
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+	
+	[PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+		
+	}];
+	
+
+}
+
+
+
+-(IBAction)hoge:(id)sender{
+	[[UIDevice currentDevice] fetchCameraRollAssetsCountInBackground:^(NSUInteger count, NSError *error) {
+		NBULogInfo(@"%@ %@", @(count), error);
+	}];
 }
 
 

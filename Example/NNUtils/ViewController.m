@@ -10,6 +10,7 @@
 #import <UIDevice+NNUtils.h>
 #import <NBULog.h>
 @import Photos;
+#import <NSNotificationCenter+NNUtils.h>
 
 @implementation ViewController
 
@@ -17,9 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	[PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-		
+
+	[[NSNotificationCenter defaultCenter] addObserverOnceForName:UIApplicationDidBecomeActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+		NSLog(@"%@", note);
 	}];
+	
 	
 
 }

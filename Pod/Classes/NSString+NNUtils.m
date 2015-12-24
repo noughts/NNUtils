@@ -158,4 +158,88 @@
     return outputText;
 }
 
+
+
+
+
+
+
+
+
+
+
+#pragma mark - 変換系
+
+- (NSString*) stringTransformWithTransform:(CFStringRef)transform reverse:(Boolean)reverse {
+	NSMutableString* retStr = [[NSMutableString alloc] initWithString:self];
+	CFStringTransform((CFMutableStringRef)retStr, NULL, transform, reverse);
+	return retStr;
+}
+
+- (NSString*) fullwidthString {
+	return [self stringTransformWithTransform:kCFStringTransformFullwidthHalfwidth
+									  reverse:true];
+}
+
+- (NSString*) halfwidthString{
+	return [self stringTransformWithTransform:kCFStringTransformFullwidthHalfwidth
+									  reverse:false];
+}
+
+- (NSString*) katakanaToHiraganaString{
+	return [self stringTransformWithTransform:kCFStringTransformHiraganaKatakana reverse:true];
+}
+
+/// ひらがなをカタカナにした文字列を取得
+- (NSString*) hiraganaToKatakanaString {
+	return [self stringTransformWithTransform:kCFStringTransformHiraganaKatakana reverse:false];
+}
+
+- (NSString*) stringHiraganaToLatin {
+	return [self stringTransformWithTransform:kCFStringTransformLatinHiragana
+									  reverse:true];
+}
+
+- (NSString*) stringLatinToHiragana {
+	return [self stringTransformWithTransform:kCFStringTransformLatinHiragana
+									  reverse:false];
+}
+
+- (NSString*) stringKatakanaToLatin {
+	return [self stringTransformWithTransform:kCFStringTransformLatinKatakana
+									  reverse:true];
+}
+
+- (NSString*) stringLatinToKatakana {
+	return [self stringTransformWithTransform:kCFStringTransformLatinKatakana
+									  reverse:false];
+}
+
+
+
+/// 全角英数字を半角にした文字列を取得
+- (NSString *)normalizedString{
+	return [self precomposedStringWithCompatibilityMapping];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

@@ -35,4 +35,14 @@
 /// よみがなを取得
 -(NSString*)yomigana;
 
+
+
+#pragma mark - 変換系
+
+/// ひらがなをカタカナにした文字列を取得
+- (NSString*)hiraganaToKatakanaString;
+
+/// 全角英数字を半角にした文字列を取得
+- (NSString *)normalizedString;
+
 @end

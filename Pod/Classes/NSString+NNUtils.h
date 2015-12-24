@@ -39,6 +39,9 @@
 
 #pragma mark - 変換系
 
+/// 半角に変換した文字列を取得
+- (NSString*) halfwidthString;
+
 /// ひらがなをカタカナにした文字列を取得
 - (NSString*)hiraganaToKatakanaString;
 

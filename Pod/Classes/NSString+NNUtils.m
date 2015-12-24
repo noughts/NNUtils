@@ -181,9 +181,9 @@
 									  reverse:true];
 }
 
+/// 半角に変換した文字列を取得
 - (NSString*) halfwidthString{
-	return [self stringTransformWithTransform:kCFStringTransformFullwidthHalfwidth
-									  reverse:false];
+	return [self stringTransformWithTransform:kCFStringTransformFullwidthHalfwidth reverse:false];
 }
 
 - (NSString*) katakanaToHiraganaString{

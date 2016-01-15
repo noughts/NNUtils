@@ -19,9 +19,7 @@
     // Do any additional setup after loading the view.
 	
 
-	[[NSNotificationCenter defaultCenter] addObserverOnceForName:UIApplicationDidBecomeActiveNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
-		NSLog(@"%@", note);
-	}];
+	NSUInteger hoge = [[UIDevice currentDevice] fetchCameraRollAssetsCount:nil];
 	
 	
 

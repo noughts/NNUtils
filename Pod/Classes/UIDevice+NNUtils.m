@@ -17,12 +17,16 @@
 /// カメラロール内の自分で撮影した写真枚数を取得。バックグラウンド動作時には非同期で正常に取得できないため、こちらを使いましょう。
 -(NSUInteger)fetchCameraRollAssetsCount:(NSError**)error{
 	if( [UIDevice currentDevice].isPhotosFrameworkAvailable == NO ){
-		*error = [NSError createWithMessage:@"PhotosFrameworkに対応していません" code:0];
+		if( error ){
+			*error = [NSError createWithMessage:@"PhotosFrameworkに対応していません" code:0];
+		}
 		return 0;
 	}
 	
 	if( [PHPhotoLibrary authorizationStatus] != PHAuthorizationStatusAuthorized ){
-		*error = [NSError createWithMessage:@"PhotoLibraryへのアクセスが許可されていません" code:0];
+		if( error ){
+			*error = [NSError createWithMessage:@"PhotoLibraryへのアクセスが許可されていません" code:0];
+		}
 		return 0;
 	}
 	
